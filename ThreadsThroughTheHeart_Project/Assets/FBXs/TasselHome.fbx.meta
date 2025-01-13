@@ -1,9 +1,39 @@
 fileFormatVersion: 2
-guid: 4f10b861f30ac6e4392e6f624c6066c3
+guid: c42455b889a4a804ca83dd42f99bf1f4
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: FrontDoorHall
+    second: {fileID: 2100000, guid: b07281ad3d7872a4eaa5f4c003f67982, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Hallway
+    second: {fileID: 2100000, guid: a08d46247d683a245a7869ac78081db1, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: TheRest
+    second: {fileID: 2100000, guid: e5351471a016a244ba9fd5e804a65dfc, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: WallTrim
+    second: {fileID: 2100000, guid: 0a6bdff64dfce764e93e96a2a663e6ba, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: WoollowsWall
+    second: {fileID: 2100000, guid: 2a3268a848d925145ac0dadce5a6f6b8, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: standardSurface2
+    second: {fileID: 2100000, guid: 7954cde354ab7274284816b8339b5938, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
@@ -90,7 +120,7 @@ ModelImporter:
     armStretch: 0.05
     legStretch: 0.05
     feetSpacing: 0
-    globalScale: 0.7
+    globalScale: 70
     rootMotionBoneName: 
     hasTranslationDoF: 0
     hasExtraRoot: 0
