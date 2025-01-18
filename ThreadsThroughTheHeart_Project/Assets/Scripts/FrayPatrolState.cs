@@ -4,20 +4,25 @@ using UnityEngine;
 
 public class FrayPatrolState : StateMachineBehaviour
 {
+    //For Patrolling
     float timer;
     List<Transform> wayPoints = new List<Transform>();
     NavMeshAgent agent;
 
+    //For Chasing
+    Transform player;
+    public float chaseRange = 5;
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
+        player = GameObject.FindGameObjectWithTag("Player").transform;
         agent = animator.transform.parent.GetComponent<NavMeshAgent>();
         timer = 0;
         GameObject go = GameObject.FindGameObjectWithTag("WayPoints");
         foreach (Transform t in go.transform)
         {
             wayPoints.Add(t);
-            Debug.Log("waypoint added");
+            //Debug.Log("waypoint added");
         }
         agent.SetDestination(wayPoints[Random.Range(0, wayPoints.Count)].position);
         Debug.Log("Fray should move to a waypoint");
@@ -34,6 +39,13 @@ public class FrayPatrolState : StateMachineBehaviour
         timer += Time.deltaTime;
         if (timer > 10)
             animator.SetBool("isPatrolling", false);
+
+        float distance = Vector3.Distance(player.position, animator.transform.position);
+        if (distance < chaseRange)
+        {
+            animator.SetBool("isChasing", true);
+            Debug.Log("Idle to chasing anim");
+        }
     }
 
     // OnStateExit is called when a transition ends and the state machine finishes evaluating this state
