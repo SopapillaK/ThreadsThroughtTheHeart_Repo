@@ -7,6 +7,7 @@ TagManager:
   - Enemy
   - Weapon
   - WayPoints
+  - InvisibleWall
   layers:
   - Default
   - TransparentFX
