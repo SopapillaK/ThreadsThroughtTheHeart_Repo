@@ -12,18 +12,12 @@ public class Enemy : MonoBehaviour
         HP -= damageAmount;
         if (HP <= 0)
         {
-            animator.SetBool("isChasing", false);
-            Debug.Log("chase off");
-            animator.SetBool("isAttacking", false);
-            Debug.Log("attack off");
-            animator.SetBool("isShouting", false);
-            Debug.Log("shout off");
-            animator.SetBool("isDie", true);
+            animator.SetTrigger("die");
         }
         else
         {
             animator.SetTrigger("damage");
-            Debug.Log("hit animation");
+            //Debug.Log("hit animation");
 
         }
     }
