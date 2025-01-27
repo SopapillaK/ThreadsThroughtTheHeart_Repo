@@ -26,7 +26,7 @@ public class FrayPatrolState : StateMachineBehaviour
             //Debug.Log("waypoint added");
         }
         agent.SetDestination(wayPoints[Random.Range(0, wayPoints.Count)].position);
-        Debug.Log("Fray should move to a waypoint");
+        //Debug.Log("Fray should move to a waypoint");
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
@@ -45,7 +45,7 @@ public class FrayPatrolState : StateMachineBehaviour
         if (distance < chaseRange)
         {
             animator.SetBool("isChasing", true);
-            Debug.Log("Idle to chasing anim");
+            //Debug.Log("Idle to chasing anim");
         }
     }
 
