@@ -8,10 +8,10 @@ public class EnemyCollisonDetection : MonoBehaviour
 
     public void OnTriggerEnter(Collider other)
     {
-        Debug.Log(other);
+        //Debug.Log(other);
         if (other.tag == "InvisibleWall")
         {
-            Debug.Log("Go back");
+            //Debug.Log("Go back");
             animator.SetBool("isChasing", false);
             animator.SetBool("isAttacking", false);
         }
