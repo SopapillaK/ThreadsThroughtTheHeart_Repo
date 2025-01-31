@@ -14,6 +14,13 @@ public class EnemyCollisonDetection : MonoBehaviour
             //Debug.Log("Go back");
             animator.SetBool("isChasing", false);
             animator.SetBool("isAttacking", false);
+            if (animator.GetBool("isPatrolling") == false)
+            {
+                animator.SetBool("isPatrolling", true);
+                animator.SetBool("isChasing", false);
+                animator.SetBool("isAttacking", false);
+                //Debug.Log("should patrol");
+            }
         }
     }
 }

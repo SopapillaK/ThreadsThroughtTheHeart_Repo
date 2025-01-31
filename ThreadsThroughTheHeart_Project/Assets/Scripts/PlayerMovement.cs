@@ -16,6 +16,8 @@ public class PlayerMovement : MonoBehaviour
     bool grounded;
 
     public Transform orientation;
+    public Animator animator;
+    public bool isWalkingCheck;
 
     float horizontalInput;
     float verticalInput;
@@ -28,6 +30,7 @@ public class PlayerMovement : MonoBehaviour
     {
         rb = GetComponent<Rigidbody>();
         rb.freezeRotation = true;
+        isWalkingCheck = false;
     }
 
     private void Update()
@@ -35,7 +38,11 @@ public class PlayerMovement : MonoBehaviour
         // ground check
         // 0.5 is half the player objects height so in this case half of the capsules height   
         grounded = Physics.Raycast(transform.position, Vector3.down, playerHeight * 0.5f + 0.2f, groundLayer);
-        
+
+        if (!Input.anyKey)
+            animator.SetBool("isWalking", false);
+
+        PlayerAttack();
         MyInput();
         SpeedControl();
 
@@ -50,6 +57,7 @@ public class PlayerMovement : MonoBehaviour
     private void FixedUpdate()
     {
         MovePlayer();
+         
     }
 
     private void MyInput()
@@ -64,6 +72,14 @@ public class PlayerMovement : MonoBehaviour
         moveDirection = orientation.forward * verticalInput + orientation.right * horizontalInput;
 
         rb.AddForce(moveDirection.normalized * moveSpeed * 10f, ForceMode.Force);
+        if( Input.GetKey("w"))
+            animator.SetBool("isWalking", true);
+        if (Input.GetKey("s"))
+            animator.SetBool("isWalking", true);
+        if (Input.GetKey("a"))
+            animator.SetBool("isWalking", true);
+        if (Input.GetKey("d"))
+            animator.SetBool("isWalking", true);
     }
 
     private void SpeedControl()
@@ -75,6 +91,14 @@ public class PlayerMovement : MonoBehaviour
         {
             Vector3 limitedVel = flatVel.normalized * moveSpeed;
             rb.velocity = new Vector3(limitedVel.x, rb.velocity.y, limitedVel.z);
+        }
+    }
+
+    private void PlayerAttack()
+    {
+        if (Input.GetMouseButtonDown(0))
+        {
+            animator.SetTrigger("isAttacking");
         }
     }
 }
