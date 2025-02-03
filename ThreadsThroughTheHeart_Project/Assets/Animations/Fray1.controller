@@ -79,6 +79,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3f967569962cbdc459dd43d3b44e5668, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  outerAttackRange: 8
 --- !u!1101 &-6281614741067682665
 AnimatorStateTransition:
   m_ObjectHideFlags: 1
@@ -121,10 +122,10 @@ AnimatorStateTransition:
   m_Mute: 0
   m_IsExit: 0
   serializedVersion: 3
-  m_TransitionDuration: 0.25
+  m_TransitionDuration: 0.25000006
   m_TransitionOffset: 0
-  m_ExitTime: 0.625
-  m_HasExitTime: 0
+  m_ExitTime: 0.9816006
+  m_HasExitTime: 1
   m_HasFixedDuration: 1
   m_InterruptionSource: 0
   m_OrderedInterruption: 1
@@ -195,6 +196,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dc78b7a273d7a2e4fa730507a7e724fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  innerAttackRange: 4
 --- !u!1101 &-3763973820809920001
 AnimatorStateTransition:
   m_ObjectHideFlags: 1
@@ -229,7 +231,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f8b039c497b81f9499098d3b3030ff78, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  chaseRange: 5
+  chaseRange: 3
 --- !u!1101 &-1946038412942737361
 AnimatorStateTransition:
   m_ObjectHideFlags: 1

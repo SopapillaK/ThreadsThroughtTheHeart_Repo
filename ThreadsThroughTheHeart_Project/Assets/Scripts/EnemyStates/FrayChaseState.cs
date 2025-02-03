@@ -7,6 +7,7 @@ public class FrayChaseState : StateMachineBehaviour
 {
     NavMeshAgent agent;
     Transform player;
+    public float innerAttackRange = 4;
 
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
@@ -24,9 +25,9 @@ public class FrayChaseState : StateMachineBehaviour
         if (distance > 15)
         {
             animator.SetBool("isChasing", false);
-            Debug.Log("chaseing to patrol anim");
+            //Debug.Log("chaseing to patrol anim");
         }
-        if (distance < 2.5f)
+        if (distance < innerAttackRange)
         {
             animator.SetBool("isAttacking", true);
             //Debug.Log("chasing to attacking");

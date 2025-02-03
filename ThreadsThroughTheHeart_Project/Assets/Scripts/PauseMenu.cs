@@ -12,28 +12,37 @@ public class PauseMenu : MonoBehaviour
     public GameObject settingPanel;
     public GameObject creditsPanel;
     public GameObject controlsPanel;
+    public GameObject loseMenuScreen;
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape))
+        if (loseMenuScreen.activeSelf)
         {
-            if (gameIsPaused)
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
+        }
+        else
+        {
+            if (Input.GetKeyDown(KeyCode.Escape))
             {
-                Resume();
-
-                if (inSettings)
+                if (gameIsPaused)
                 {
-                    Pause();
+                    Resume();
 
-                    if (inConOrCred)
+                    if (inSettings)
                     {
-                        Settings();
+                        Pause();
+
+                        if (inConOrCred)
+                        {
+                            Settings();
+                        }
                     }
                 }
-            }
-            else
-            {
-                Pause();
+                else
+                {
+                    Pause();
+                }
             }
         }
     }

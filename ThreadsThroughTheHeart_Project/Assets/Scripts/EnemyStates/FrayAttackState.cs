@@ -7,6 +7,7 @@ public class FrayAttackState : StateMachineBehaviour
 {
     Transform player;
     float timer;
+    public float outerAttackRange = 8;
 
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
@@ -20,13 +21,11 @@ public class FrayAttackState : StateMachineBehaviour
     {
         animator.transform.LookAt(player);
         float distance = Vector3.Distance(player.position, animator.transform.position);
-        if (distance > 3.5f)
+        if (distance > outerAttackRange)
         {
             animator.SetBool("isAttacking", false);
             //Debug.Log("attack to chasing anim");
             timer += Time.deltaTime;
-
-            
         }
         timer += Time.deltaTime;
         if (timer > 3)
