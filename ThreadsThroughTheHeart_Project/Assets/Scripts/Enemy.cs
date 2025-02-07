@@ -6,6 +6,9 @@ public class Enemy : MonoBehaviour
 {
     public int HP = 8;
     public Animator animator;
+    public GameObject fray;
+
+    public GameManager gameManager;
 
     public void TakeDamage(int damageAmount)
     {
@@ -15,6 +18,7 @@ public class Enemy : MonoBehaviour
             if (HP <= 0)
             {
                 animator.SetTrigger("die");
+                Invoke("DeleteFray", 2.0f);
             }
             else
             {
@@ -23,5 +27,11 @@ public class Enemy : MonoBehaviour
 
             }
         }
+    }
+
+    void DeleteFray()
+    {
+        Destroy(fray);
+        gameManager.enemyDeadCount++;
     }
 }

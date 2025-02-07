@@ -13,36 +13,34 @@ public class PauseMenu : MonoBehaviour
     public GameObject creditsPanel;
     public GameObject controlsPanel;
     public GameObject loseMenuScreen;
+    public GameObject winMenuScreen;
 
     void Update()
     {
-        if (loseMenuScreen.activeSelf)
+        if (loseMenuScreen.activeSelf || winMenuScreen.activeSelf)
         {
             Cursor.lockState = CursorLockMode.None;
             Cursor.visible = true;
         }
-        else
+        if (Input.GetKeyDown(KeyCode.Escape))
         {
-            if (Input.GetKeyDown(KeyCode.Escape))
-            {
-                if (gameIsPaused)
+            if (gameIsPaused)
                 {
-                    Resume();
+                Resume();
 
-                    if (inSettings)
-                    {
-                        Pause();
-
-                        if (inConOrCred)
-                        {
-                            Settings();
-                        }
-                    }
-                }
-                else
+                if (inSettings)
                 {
                     Pause();
+
+                    if (inConOrCred)
+                    {
+                        Settings();
+                    }
                 }
+            }
+            else
+            {
+                Pause();
             }
         }
     }
@@ -72,6 +70,12 @@ public class PauseMenu : MonoBehaviour
         Debug.Log("Restarting level...");
         Time.timeScale = 1f;
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
+
+    public void ToHeartHub()
+    {
+        Time.timeScale = 1f;
+        SceneManager.LoadScene("HeartHub");
     }
 
     public void QuitGame()
