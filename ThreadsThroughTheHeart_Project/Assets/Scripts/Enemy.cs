@@ -16,7 +16,6 @@ public class Enemy : MonoBehaviour
 
     void Update()
     {
-        TakeDamage(1);
         if (posThoughts.GetComponent<PositiveThought>().currentHP == 1)
         {
             Time.timeScale = 0.2f;
@@ -29,28 +28,31 @@ public class Enemy : MonoBehaviour
             postProc.SetActive(false);
             posOptions.SetActive(false);
         }
+
+        if (posThoughts.GetComponent<PositiveThought>().rightChoice == true)
+        {
+            FrayDie();
+
+            Time.timeScale = 1.0f;
+            postProc.SetActive(false);
+            posOptions.SetActive(false);
+        }
     }
     public void TakeDamage(int damageAmount)
     {
-        if (animator.GetBool("isShouting") || posThoughts.GetComponent<PositiveThought>().rightChoice == true)
+        if (animator.GetBool("isShouting"))
         {
             HP -= damageAmount;
-            if (posThoughts.GetComponent<PositiveThought>().rightChoice == true)
-            {
-                animator.SetTrigger("die");
-                Invoke("DeleteFray", 2.0f);
+            animator.SetTrigger("damage");
+            //Debug.Log("hit animation");
 
-                Time.timeScale = 1.0f;
-                postProc.SetActive(false);
-                posOptions.SetActive(false);
-            }
-            else
-            {
-                animator.SetTrigger("damage");
-                //Debug.Log("hit animation");
-
-            }
         }
+    }
+
+    public void FrayDie()
+    {
+        animator.SetTrigger("die");
+        Invoke("DeleteFray", 2.0f);
     }
 
     void DeleteFray()

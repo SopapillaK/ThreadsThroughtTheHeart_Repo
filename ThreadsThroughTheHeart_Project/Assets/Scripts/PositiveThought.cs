@@ -26,20 +26,25 @@ public class PositiveThought : MonoBehaviour
             }
             if (Input.GetKey(KeyCode.T))
             {
+                Debug.Log("T");
+
                 //Its okay to be alone
                 madeChoice = true;
                 enemyFray.GetComponent<Enemy>().HP = 8;
             }
-            else if (Input.GetKey(KeyCode.Y))
+            if (Input.GetKey(KeyCode.Y))
             {
+                Debug.Log("Y");
                 //If they leave you they dont love you
                 madeChoice = true;
                 //enemyFray.GetComponent<Enemy>().HP = 0;
                 ac.PlayOneShot(correctPosTho);
                 rightChoice = true;
             }
-            else if (Input.GetKey(KeyCode.U))
+            if (Input.GetKey(KeyCode.U))
             {
+                Debug.Log("U");
+
                 //You don't need others all you need is yourself
                 madeChoice = true;
                 enemyFray.GetComponent<Enemy>().HP = 8;
