@@ -7,6 +7,16 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
+      name: Bars2
+    second: {fileID: 2100000, guid: 56c03726fde13fc42b7a53cb5e856d3b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Base
+    second: {fileID: 2100000, guid: ff03a503bb9fed54294859a74f4fd2ce, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
       name: Bulb2
     second: {fileID: 2100000, guid: 51e840a6c103e5a43bd75638cf7074c7, type: 2}
   - first:
@@ -14,6 +24,11 @@ ModelImporter:
       assembly: UnityEngine.CoreModule
       name: coil
     second: {fileID: 2100000, guid: b4a4e770fe9bbe14f8746d23e686ebbf, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: fixture
+    second: {fileID: 2100000, guid: 06857d2aa7780044380e5347a64f59c0, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
