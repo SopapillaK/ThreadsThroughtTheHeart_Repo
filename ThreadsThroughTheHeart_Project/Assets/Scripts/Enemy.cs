@@ -52,8 +52,7 @@ public class Enemy : MonoBehaviour
     public void FrayDie()
     {
         animator.SetTrigger("die");
-        Invoke("ShrinkFray", 3.3f);
-        Invoke("DeleteFray", 6f);
+        Invoke("DeleteFray", 4f);
     }
 
     void DeleteFray()
