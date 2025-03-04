@@ -2439,7 +2439,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   HP: 2
   animator: {fileID: 196328118}
-  fray: {fileID: 196328117}
+  fray: {fileID: 494402258}
   posThoughts: {fileID: 1891576035}
   postProc: {fileID: 357257426}
   posOptions: {fileID: 1451829040}
@@ -11519,7 +11519,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1317489957}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.6241072, y: 0.000000019012704, z: -0.00000001518671, w: 0.78133875}
+  m_LocalRotation: {x: 0.6241072, y: -0.000000019012704, z: 0.00000001518671, w: 0.78133875}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
