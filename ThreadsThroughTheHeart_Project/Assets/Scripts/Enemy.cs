@@ -52,12 +52,18 @@ public class Enemy : MonoBehaviour
     public void FrayDie()
     {
         animator.SetTrigger("die");
-        Invoke("DeleteFray", 2f);
+        Invoke("ShrinkFray", 3.3f);
+        Invoke("DeleteFray", 6f);
     }
 
     void DeleteFray()
     {
         Destroy(fray);
         gameManager.enemyDeadCount++;
+    }
+
+    public void ShrinkFray()
+    {
+        fray.transform.localScale = new Vector3(0.2f, 0.2f, 0.2f);
     }
 }

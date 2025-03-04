@@ -3,7 +3,42 @@ guid: 314cb8fb1cfe2ea4582c1fec6a3b6478
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: EyeTex
+    second: {fileID: 2100000, guid: f222636fb98823d47ba565e489ef74e0, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Helix1Tex
+    second: {fileID: 2100000, guid: 215f7bc7b2517ca4c8f57e596693d006, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: helix2Tex
+    second: {fileID: 2100000, guid: 215f7bc7b2517ca4c8f57e596693d006, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: helix3Tex
+    second: {fileID: 2100000, guid: 215f7bc7b2517ca4c8f57e596693d006, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: helix4Tex
+    second: {fileID: 2100000, guid: 215f7bc7b2517ca4c8f57e596693d006, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: sphereTex
+    second: {fileID: 2100000, guid: 22f6b647f0dd11d43937d17704f6b652, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: stitchTex
+    second: {fileID: 2100000, guid: 88d60e9128b42a540a80051fb5a6fc35, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
@@ -90,7 +125,7 @@ ModelImporter:
     armStretch: 0.05
     legStretch: 0.05
     feetSpacing: 0
-    globalScale: 0.79999995
+    globalScale: 80
     rootMotionBoneName: 
     hasTranslationDoF: 0
     hasExtraRoot: 0
