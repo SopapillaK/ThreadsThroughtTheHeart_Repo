@@ -3,7 +3,62 @@ guid: f19dbc77ca6df1e41ac31f45e36b76ba
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Bangs1
+    second: {fileID: 2100000, guid: 28cbe09de73448349ad361dd7d73cb23, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Body3
+    second: {fileID: 2100000, guid: 5e7c29f488436e4458d43f882e178214, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Boots1
+    second: {fileID: 2100000, guid: f361f6022e9c1854ea84f7551e438a5d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Eyebrows1
+    second: {fileID: 2100000, guid: e29c07b9333aaa44788461eeb20b4ec3, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Eyes1
+    second: {fileID: 2100000, guid: 9ee402f149481f8428508f68893f44ee, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Hat1
+    second: {fileID: 2100000, guid: d458e4661f1839341833db6950552ee1, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Shirt1
+    second: {fileID: 2100000, guid: 8cfb271c820585e4792e87cb5424d0b4, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Skirt2
+    second: {fileID: 2100000, guid: 42ecf256051f2f94fb91fb72a6d698f2, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: braids
+    second: {fileID: 2100000, guid: be1b57b960cca7a4f8499b762f6203aa, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: hairtie
+    second: {fileID: 2100000, guid: 5ed01271ffcdae5478d2a0a868c53d53, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: standardSurface1
+    second: {fileID: 2100000, guid: e29c07b9333aaa44788461eeb20b4ec3, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
@@ -90,7 +145,7 @@ ModelImporter:
     armStretch: 0.05
     legStretch: 0.05
     feetSpacing: 0
-    globalScale: 0.39999998
+    globalScale: 40
     rootMotionBoneName: 
     hasTranslationDoF: 0
     hasExtraRoot: 0
