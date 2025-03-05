@@ -9,6 +9,7 @@ TagManager:
   - WayPoints
   - InvisibleWall
   - AttackArea
+  - InvisibleWall2
   layers:
   - Default
   - TransparentFX
