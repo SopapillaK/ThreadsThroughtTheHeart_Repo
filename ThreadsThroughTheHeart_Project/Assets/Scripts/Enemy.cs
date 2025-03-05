@@ -4,9 +4,12 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
+    [Header("Enemy Stats")]
     public int HP = 8;
     public Animator animator;
     public GameObject fray;
+    public GameObject attackArea;
+    [Header("Positive Thoughts QTE")]
     public GameObject posThoughts;
     public GameObject postProc;
     public GameObject posOptions;
@@ -16,6 +19,9 @@ public class Enemy : MonoBehaviour
 
     void Update()
     {
+        
+        
+        //Positivethought QTE
         if (posThoughts.GetComponent<PositiveThought>().currentHP == 1)
         {
             Time.timeScale = 0.2f;
@@ -52,6 +58,7 @@ public class Enemy : MonoBehaviour
     public void FrayDie()
     {
         animator.SetTrigger("die");
+        animator.SetBool("isAttacking", false);
         Invoke("DeleteFray", 2.6f);
     }
 
@@ -61,8 +68,10 @@ public class Enemy : MonoBehaviour
         gameManager.enemyDeadCount++;
     }
 
-    public void ShrinkFray()
-    {
-        fray.transform.localScale = new Vector3(0.2f, 0.2f, 0.2f);
-    }
+    
+
+    //public void ShrinkFray()
+    //{
+    //    fray.transform.localScale = new Vector3(0.2f, 0.2f, 0.2f);
+    //}
 }

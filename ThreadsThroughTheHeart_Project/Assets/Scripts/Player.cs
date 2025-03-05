@@ -15,7 +15,7 @@ public class Player : MonoBehaviour
 
     public void OnTriggerEnter (Collider other)
     {
-        if (other.tag == "Enemy")
+        if (other.tag == "AttackArea")
         {
             PlayerTakeDamage(1);
         }

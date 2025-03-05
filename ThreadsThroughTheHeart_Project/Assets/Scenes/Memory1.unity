@@ -287,7 +287,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: eb715bd4f1766b143aa177a73e77df15, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 5.98
+      value: 6.29
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: eb715bd4f1766b143aa177a73e77df15, type: 3}
       propertyPath: m_LocalPosition.y
@@ -295,7 +295,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: eb715bd4f1766b143aa177a73e77df15, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 6.114
+      value: 5.2039995
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: eb715bd4f1766b143aa177a73e77df15, type: 3}
       propertyPath: m_LocalRotation.w
@@ -2707,6 +2707,7 @@ MonoBehaviour:
   HP: 2
   animator: {fileID: 196328118}
   fray: {fileID: 494402258}
+  attackArea: {fileID: 255090968}
   posThoughts: {fileID: 1891576035}
   postProc: {fileID: 357257426}
   posOptions: {fileID: 1451829040}
@@ -2995,7 +2996,7 @@ GameObject:
   - component: {fileID: 255090974}
   m_Layer: 9
   m_Name: AttackArea
-  m_TagString: Untagged
+  m_TagString: AttackArea
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5657,6 +5658,7 @@ GameObject:
   - component: {fileID: 494402261}
   - component: {fileID: 494402260}
   - component: {fileID: 494402259}
+  - component: {fileID: 494402263}
   m_Layer: 9
   m_Name: FrayHolder (1)
   m_TagString: Enemy
@@ -5744,6 +5746,20 @@ Transform:
   - {fileID: 196328116}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &494402263
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 494402258}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d34e17fec380500479ec963d085e8cef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  frayAnimator: {fileID: 196328118}
+  attackArea: {fileID: 255090968}
 --- !u!1001 &496617979
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6149,7 +6165,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: ebad91ed2817b9d4697ea476e6a4266d, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 5.8
+      value: 6.11
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: ebad91ed2817b9d4697ea476e6a4266d, type: 3}
       propertyPath: m_LocalPosition.y
@@ -6157,7 +6173,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: ebad91ed2817b9d4697ea476e6a4266d, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 4.8
+      value: 3.89
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: ebad91ed2817b9d4697ea476e6a4266d, type: 3}
       propertyPath: m_LocalRotation.w
@@ -6536,6 +6552,7 @@ MonoBehaviour:
   HP: 2
   animator: {fileID: 550078972}
   fray: {fileID: 194131196}
+  attackArea: {fileID: 0}
   posThoughts: {fileID: 2036677189}
   postProc: {fileID: 357257426}
   posOptions: {fileID: 1451829040}
@@ -7131,7 +7148,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: eb715bd4f1766b143aa177a73e77df15, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 7.91
+      value: 8.219999
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: eb715bd4f1766b143aa177a73e77df15, type: 3}
       propertyPath: m_LocalPosition.y
@@ -7139,7 +7156,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: eb715bd4f1766b143aa177a73e77df15, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 4.81
+      value: 3.8999999
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: eb715bd4f1766b143aa177a73e77df15, type: 3}
       propertyPath: m_LocalRotation.w
@@ -12780,7 +12797,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: eb715bd4f1766b143aa177a73e77df15, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 6.22
+      value: 6.5299997
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: eb715bd4f1766b143aa177a73e77df15, type: 3}
       propertyPath: m_LocalPosition.y
@@ -12788,7 +12805,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: eb715bd4f1766b143aa177a73e77df15, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 3.28
+      value: 2.37
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: eb715bd4f1766b143aa177a73e77df15, type: 3}
       propertyPath: m_LocalRotation.w
@@ -14648,7 +14665,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: eb715bd4f1766b143aa177a73e77df15, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 6.22
+      value: 6.5299997
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: eb715bd4f1766b143aa177a73e77df15, type: 3}
       propertyPath: m_LocalPosition.y
@@ -14656,7 +14673,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: eb715bd4f1766b143aa177a73e77df15, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 3.28
+      value: 2.37
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: eb715bd4f1766b143aa177a73e77df15, type: 3}
       propertyPath: m_LocalRotation.w
@@ -17644,6 +17661,7 @@ MonoBehaviour:
   HP: 8
   animator: {fileID: 1924188642}
   fray: {fileID: 1924188640}
+  attackArea: {fileID: 0}
   posThoughts: {fileID: 2036677189}
   postProc: {fileID: 357257426}
   posOptions: {fileID: 1451829040}
