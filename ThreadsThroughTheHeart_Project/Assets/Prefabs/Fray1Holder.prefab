@@ -1553,6 +1553,8 @@ MonoBehaviour:
   animator: {fileID: 16586491934566729}
   fray: {fileID: 1917212989547606640}
   attackArea: {fileID: 2286455366035462319}
+  fightActivated: 0
+  wall: {fileID: 0}
   posThoughts: {fileID: 2911504731147903937}
   postProc: {fileID: 0}
   posOptions: {fileID: 0}

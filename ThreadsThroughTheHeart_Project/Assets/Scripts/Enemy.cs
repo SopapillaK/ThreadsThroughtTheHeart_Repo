@@ -9,6 +9,9 @@ public class Enemy : MonoBehaviour
     public Animator animator;
     public GameObject fray;
     public GameObject attackArea;
+    [Header("Wall Up")]
+    public bool fightActivated = false;
+    public GameObject wall;
     [Header("Positive Thoughts QTE")]
     public GameObject posThoughts;
     public GameObject postProc;
@@ -19,8 +22,16 @@ public class Enemy : MonoBehaviour
 
     void Update()
     {
-        
-        
+        //Activate wall
+        if (fightActivated == true)
+        {
+            wall.SetActive(true);
+        }
+        else
+        {
+            wall.SetActive(false);
+        }
+
         //Positivethought QTE
         if (posThoughts.GetComponent<PositiveThought>().currentHP == 1)
         {
@@ -48,6 +59,7 @@ public class Enemy : MonoBehaviour
     {
         if (animator.GetBool("isShouting"))
         {
+            fightActivated = true;
             HP -= damageAmount;
             animator.SetTrigger("damage");
             //Debug.Log("hit animation");
@@ -57,6 +69,7 @@ public class Enemy : MonoBehaviour
 
     public void FrayDie()
     {
+        fightActivated = false;
         animator.SetTrigger("die");
         animator.SetBool("isAttacking", false);
         Invoke("DeleteFray", 2.6f);
