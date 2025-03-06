@@ -602,7 +602,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyDeadCount: 0
-  enemyTotalCount: 1
+  enemyTotalCount: 5
   winMenuScreen: {fileID: 1676722827}
 --- !u!4 &54091318
 Transform:
