@@ -8,7 +8,7 @@ public class FrayPatrolState : StateMachineBehaviour
     float timer;
     List<Transform> wayPoints = new List<Transform>();
     NavMeshAgent agent;
-    string wayPointList;
+    public string wayPointList;
 
     //For Chasing
     Transform player;
@@ -16,18 +16,22 @@ public class FrayPatrolState : StateMachineBehaviour
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        GameObject enemy = GameObject.FindGameObjectWithTag("Enemy");
-        Enemy enemyScript = enemy.GetComponent<Enemy>();
-        wayPointList = enemyScript.wayPointTag;
+
+        //GameObject enemy = GameObject.Find("Fray1Holder");
+        ////GameObject enemy = GameObject.FindGameObjectWithTag("Enemy");
+        //Enemy enemyScript = enemy.GetComponent<Enemy>();
+        //wayPointList = enemyScript.wayPointTag;
+
         player = GameObject.FindGameObjectWithTag("Player").transform;
         agent = animator.transform.parent.GetComponent<NavMeshAgent>();
         agent.speed = 1.5f;
         timer = 0;
+
         GameObject go = GameObject.FindGameObjectWithTag(wayPointList);
         foreach (Transform t in go.transform)
         {
-            //wayPoints.Add(t);
-            Debug.Log("waypoint added");
+            wayPoints.Add(t);
+            //Debug.Log("waypoint added");
         }
         agent.SetDestination(wayPoints[Random.Range(0, wayPoints.Count)].position);
         //Debug.Log("Fray should move to a waypoint");

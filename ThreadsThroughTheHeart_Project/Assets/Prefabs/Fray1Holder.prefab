@@ -293,6 +293,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 16586491934566729}
+  enemy: {fileID: 4153453211204628460}
 --- !u!114 &1732182375273660775
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -457,7 +458,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: eb0b340d75533a448b2526481a2de627, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1555,6 +1556,8 @@ MonoBehaviour:
   attackArea: {fileID: 2286455366035462319}
   fightActivated: 0
   wall: {fileID: 0}
+  wayPoints: {fileID: 0}
+  wayPointTag: 
   posThoughts: {fileID: 2911504731147903937}
   postProc: {fileID: 0}
   posOptions: {fileID: 0}

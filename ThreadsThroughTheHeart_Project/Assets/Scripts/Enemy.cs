@@ -15,6 +15,7 @@ public class Enemy : MonoBehaviour
     [Header("Waypoints")]
     public GameObject wayPoints;
     public string wayPointTag;
+    //public string enemyName;
     [Header("Positive Thoughts QTE")]
     public GameObject posThoughts;
     public GameObject postProc;
@@ -26,6 +27,10 @@ public class Enemy : MonoBehaviour
     void Awake()
     {
         wayPointTag = wayPoints.tag;
+        //enemyName = gameObject.name;
+
+        FrayPatrolState frayPatrolState = animator.GetBehaviour<FrayPatrolState>();
+        frayPatrolState.wayPointList = wayPointTag;
     }
     void Update()
     {
