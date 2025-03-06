@@ -7,11 +7,6 @@ public class EnemyAttackArea : MonoBehaviour
     public Animator frayAnimator;
     public GameObject attackArea;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
     // Update is called once per frame
     void Update()

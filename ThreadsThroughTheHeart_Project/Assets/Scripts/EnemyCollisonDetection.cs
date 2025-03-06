@@ -5,6 +5,7 @@ using UnityEngine;
 public class EnemyCollisonDetection : MonoBehaviour
 {
     public Animator animator;
+    public Enemy enemy;
 
     public void OnTriggerEnter(Collider other)
     {
@@ -21,6 +22,12 @@ public class EnemyCollisonDetection : MonoBehaviour
                 animator.SetBool("isAttacking", false);
                 //Debug.Log("should patrol");
             }
+        }
+        if (other.tag == "Weapon")
+        {
+            Debug.Log("EnemyHit by weapon");
+            enemy.TakeDamage(1);
+
         }
     }
 }
