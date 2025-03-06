@@ -23,7 +23,7 @@ public class Enemy : MonoBehaviour
 
     public GameManager gameManager;
 
-    void Start()
+    void Awake()
     {
         wayPointTag = wayPoints.tag;
     }
