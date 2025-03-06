@@ -11,6 +11,7 @@ public class WeaponCollisionDetection : MonoBehaviour
     {
         if(other.tag == "Enemy" && wc.isAttacking)
         {
+            Debug.Log("Weapon hit enemy collision");
             other.GetComponent<Enemy>().TakeDamage(damageAmount);
         }
     }

@@ -24,8 +24,8 @@ public class WeaponController : MonoBehaviour
     {
         isAttacking = true;
         canAttack = false;
-        Animator anim = weapon.GetComponent<Animator>();
-        anim.SetTrigger("Attack");
+        //Animator anim = weapon.GetComponent<Animator>();
+        //anim.SetTrigger("Attack");
         StartCoroutine(ResetattackCooldown());
     }
 
