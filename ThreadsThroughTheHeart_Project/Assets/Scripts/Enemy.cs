@@ -12,6 +12,9 @@ public class Enemy : MonoBehaviour
     [Header("Wall Up")]
     public bool fightActivated = false;
     public GameObject wall;
+    [Header("Waypoints")]
+    public GameObject wayPoints;
+    public string wayPointTag;
     [Header("Positive Thoughts QTE")]
     public GameObject posThoughts;
     public GameObject postProc;
@@ -20,6 +23,10 @@ public class Enemy : MonoBehaviour
 
     public GameManager gameManager;
 
+    void Start()
+    {
+        wayPointTag = wayPoints.tag;
+    }
     void Update()
     {
         //Activate wall
