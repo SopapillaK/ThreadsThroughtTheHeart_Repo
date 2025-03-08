@@ -11,6 +11,7 @@ public class FrayShoutState : StateMachineBehaviour
     {
         timer = 0;
         animator.SetBool("isAttacking", false);
+        animator.SetBool("ShoutSound", true);
 
     }
 
@@ -28,6 +29,7 @@ public class FrayShoutState : StateMachineBehaviour
     // OnStateExit is called when a transition ends and the state machine finishes evaluating this state
     override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
+        animator.SetBool("ShoutSound", false);
 
     }
 

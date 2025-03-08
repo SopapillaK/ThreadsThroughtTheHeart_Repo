@@ -20,6 +20,7 @@ public class Enemy : MonoBehaviour
     public GameObject posThoughts;
     public GameObject postProc;
     public GameObject posOptions;
+   
 
 
     public GameManager gameManager;
@@ -89,8 +90,8 @@ public class Enemy : MonoBehaviour
 
     void DeleteFray()
     {
-        Destroy(fray);
         gameManager.enemyDeadCount++;
+        Destroy(fray);
     }
 
     

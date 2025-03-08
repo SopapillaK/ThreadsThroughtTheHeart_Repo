@@ -37,7 +37,6 @@ public class PositiveThought : MonoBehaviour
                 Debug.Log("Y");
                 //If they leave you they dont love you
                 madeChoice = true;
-                //enemyFray.GetComponent<Enemy>().HP = 0;
                 ac.PlayOneShot(correctPosTho);
                 rightChoice = true;
             }
