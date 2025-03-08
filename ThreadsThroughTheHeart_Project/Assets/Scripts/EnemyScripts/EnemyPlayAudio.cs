@@ -5,10 +5,8 @@ using UnityEngine;
 public class EnemyPlayAudio : MonoBehaviour
 {
     public Animator frayAnimator;
-    public Enemy enemy;
     public AudioSource audioSource;
     public AudioClip frayNegThought;
-    public bool isShouting = false;
 
 
     // Update is called once per frame

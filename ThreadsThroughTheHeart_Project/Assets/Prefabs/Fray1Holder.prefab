@@ -292,7 +292,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: f95d7b77f9678584c844fc89ed34f439, type: 3}
+  m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -420,7 +420,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   frayAnimator: {fileID: 16586491934566729}
   audioSource: {fileID: 4613441611404725291}
-  frayNegThought: {fileID: 8300000, guid: f95d7b77f9678584c844fc89ed34f439, type: 3}
+  frayNegThought: {fileID: 0}
 --- !u!1 &1993309397644435133
 GameObject:
   m_ObjectHideFlags: 0
