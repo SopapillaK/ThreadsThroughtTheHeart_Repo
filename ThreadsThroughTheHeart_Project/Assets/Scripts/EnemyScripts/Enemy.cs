@@ -9,6 +9,7 @@ public class Enemy : MonoBehaviour
     public Animator animator;
     public GameObject fray;
     public GameObject attackArea;
+    bool frayDie = false;
     [Header("Wall Up")]
     public bool fightActivated = false;
     public GameObject wall;
@@ -61,11 +62,16 @@ public class Enemy : MonoBehaviour
 
         if (posThoughts.GetComponent<PositiveThought>().rightChoice == true)
         {
-            FrayDie();
-
             Time.timeScale = 1.0f;
             postProc.SetActive(false);
             posOptions.SetActive(false);
+
+            if (!frayDie)
+            {
+                frayDie = true;
+                FrayDie();
+              
+            }
         }
     }
     public void TakeDamage(int damageAmount)
@@ -90,6 +96,7 @@ public class Enemy : MonoBehaviour
 
     void DeleteFray()
     {
+        Debug.Log("Fray Dead");
         gameManager.enemyDeadCount++;
         Destroy(fray);
     }
