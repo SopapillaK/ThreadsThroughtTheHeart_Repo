@@ -2874,8 +2874,24 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1917212989547606640, guid: b728b076897f1014c8708edd21df10af, type: 3}
       propertyPath: m_Name
-      value: Fray1Holder (1)
+      value: 'Fray2Holder '
       objectReference: {fileID: 0}
+    - target: {fileID: 1947285614825071609, guid: b728b076897f1014c8708edd21df10af, type: 3}
+      propertyPath: frayHolder
+      value: 
+      objectReference: {fileID: 1886587868}
+    - target: {fileID: 1947285614825071609, guid: b728b076897f1014c8708edd21df10af, type: 3}
+      propertyPath: wrong2PosTho
+      value: 
+      objectReference: {fileID: 8300000, guid: 0b8a64a0a29c8ba40b845592de528dc2, type: 3}
+    - target: {fileID: 1947285614825071609, guid: b728b076897f1014c8708edd21df10af, type: 3}
+      propertyPath: wrong3PosTho
+      value: 
+      objectReference: {fileID: 8300000, guid: 309c23edbdddeab42ad9feb89f4d8ebc, type: 3}
+    - target: {fileID: 1947285614825071609, guid: b728b076897f1014c8708edd21df10af, type: 3}
+      propertyPath: correctPosTho
+      value: 
+      objectReference: {fileID: 8300000, guid: 32166e9feaa6b8a4983663f7a8429f4c, type: 3}
     - target: {fileID: 3472064619495991343, guid: b728b076897f1014c8708edd21df10af, type: 3}
       propertyPath: m_LocalPosition.x
       value: 17.77
@@ -2940,6 +2956,10 @@ PrefabInstance:
       propertyPath: m_audioClip
       value: 
       objectReference: {fileID: 8300000, guid: 7fbea00a1dad0444c9a4947d214f866d, type: 3}
+    - target: {fileID: 6456481787930029918, guid: b728b076897f1014c8708edd21df10af, type: 3}
+      propertyPath: m_Name
+      value: Fray2
+      objectReference: {fileID: 0}
     - target: {fileID: 8753225350142373755, guid: b728b076897f1014c8708edd21df10af, type: 3}
       propertyPath: frayNegThought
       value: 
@@ -11962,7 +11982,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1317489957}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.5107761, y: -0.00000008625474, z: 0.000000051245955, w: 0.8597138}
+  m_LocalRotation: {x: 0.5107761, y: 0.00000008625472, z: -0.000000051245944, w: 0.8597138}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -16091,6 +16111,11 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 1280, y: 600}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &1886587868 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1917212989547606640, guid: b728b076897f1014c8708edd21df10af, type: 3}
+  m_PrefabInstance: {fileID: 264534700}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1904530888
 GameObject:
   m_ObjectHideFlags: 0
@@ -17192,6 +17217,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2104123323}
   m_CullTransparentMesh: 1
+--- !u!1 &2106223908 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1917212989547606640, guid: b728b076897f1014c8708edd21df10af, type: 3}
+  m_PrefabInstance: {fileID: 7635632138225520963}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2113674423
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -17788,6 +17818,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: Fray1Holder
       objectReference: {fileID: 0}
+    - target: {fileID: 1947285614825071609, guid: b728b076897f1014c8708edd21df10af, type: 3}
+      propertyPath: frayHolder
+      value: 
+      objectReference: {fileID: 2106223908}
+    - target: {fileID: 1947285614825071609, guid: b728b076897f1014c8708edd21df10af, type: 3}
+      propertyPath: wrong2PosTho
+      value: 
+      objectReference: {fileID: 8300000, guid: 6591029144509f94db259284499d19fd, type: 3}
+    - target: {fileID: 1947285614825071609, guid: b728b076897f1014c8708edd21df10af, type: 3}
+      propertyPath: wrong3PosTho
+      value: 
+      objectReference: {fileID: 8300000, guid: 35b0667f52ebc574682aedd5e3322107, type: 3}
+    - target: {fileID: 1947285614825071609, guid: b728b076897f1014c8708edd21df10af, type: 3}
+      propertyPath: correctPosTho
+      value: 
+      objectReference: {fileID: 8300000, guid: 157ab3d038cdc1843b2854fbb573b573, type: 3}
     - target: {fileID: 3472064619495991343, guid: b728b076897f1014c8708edd21df10af, type: 3}
       propertyPath: m_LocalPosition.x
       value: 1.84
@@ -17852,6 +17898,10 @@ PrefabInstance:
       propertyPath: m_audioClip
       value: 
       objectReference: {fileID: 8300000, guid: 19a61b116e064884abd1e868449f9a10, type: 3}
+    - target: {fileID: 6456481787930029918, guid: b728b076897f1014c8708edd21df10af, type: 3}
+      propertyPath: m_Name
+      value: Fray1
+      objectReference: {fileID: 0}
     - target: {fileID: 8753225350142373755, guid: b728b076897f1014c8708edd21df10af, type: 3}
       propertyPath: frayNegThought
       value: 

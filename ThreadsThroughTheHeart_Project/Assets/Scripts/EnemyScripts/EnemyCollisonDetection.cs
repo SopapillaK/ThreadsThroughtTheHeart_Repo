@@ -25,7 +25,7 @@ public class EnemyCollisonDetection : MonoBehaviour
         }
         if (other.tag == "Weapon")
         {
-            Debug.Log("EnemyHit by weapon");
+            //Debug.Log("EnemyHit by weapon");
             enemy.TakeDamage(1);
 
         }

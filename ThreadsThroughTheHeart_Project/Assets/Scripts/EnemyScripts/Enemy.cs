@@ -53,7 +53,7 @@ public class Enemy : MonoBehaviour
             postProc.SetActive(true);
             posOptions.SetActive(true);
         }
-        else if (HP == 8)
+        else if (HP == 5)
         {
             Time.timeScale = 1.0f;
             postProc.SetActive(false);
@@ -96,7 +96,7 @@ public class Enemy : MonoBehaviour
 
     void DeleteFray()
     {
-        Debug.Log("Fray Dead");
+        //Debug.Log("Fray Dead");
         gameManager.enemyDeadCount++;
         Destroy(fray);
     }
