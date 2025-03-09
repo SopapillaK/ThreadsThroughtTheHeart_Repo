@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel.Design;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class understandingChoice : MonoBehaviour
 {
@@ -67,6 +68,9 @@ public class understandingChoice : MonoBehaviour
             Choice2.SetActive(false);
             Choice3.SetActive(false);
             QuestionText.SetActive(false);
+
+            Invoke("GoodEndingVid", 5f);
+
         }
         else if (ChoiceMade == 3)
         {
@@ -74,6 +78,9 @@ public class understandingChoice : MonoBehaviour
             Choice2.SetActive(false);
             Choice3.SetActive(false);
             QuestionText.SetActive(false);
+
+            Invoke("BadEndingVid", 2f);
+
         }
         else if (ChoiceMade == 1)
         {
@@ -81,7 +88,19 @@ public class understandingChoice : MonoBehaviour
             Choice2.SetActive(false);
             Choice3.SetActive(false);
             QuestionText.SetActive(false);
+            
+            Invoke("BadEndingVid", 2f);
         }
+    }
+
+    void GoodEndingVid()
+    {
+        SceneManager.LoadScene("GoodEnding");
+    }
+
+    void BadEndingVid()
+    {
+        SceneManager.LoadScene("BadEnding");
     }
 
     public void LoadPoints()
@@ -100,5 +119,6 @@ public class understandingChoice : MonoBehaviour
         Choices();
         Pointstext.text = UnderstandingPoints + "/15";
         SavePoints();
+
     }
 }
