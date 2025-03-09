@@ -292,7 +292,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 19a61b116e064884abd1e868449f9a10, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -420,7 +420,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   frayAnimator: {fileID: 16586491934566729}
   audioSource: {fileID: 4613441611404725291}
-  frayNegThought: {fileID: 0}
+  frayNegThought: {fileID: 8300000, guid: 19a61b116e064884abd1e868449f9a10, type: 3}
 --- !u!1 &1993309397644435133
 GameObject:
   m_ObjectHideFlags: 0
@@ -718,8 +718,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyFray: {fileID: 6456481787930029918}
+  frayHolder: {fileID: 1917212989547606640}
   ac: {fileID: 1404713815059766771}
-  correctPosTho: {fileID: 8300000, guid: f95d7b77f9678584c844fc89ed34f439, type: 3}
+  correctPosTho: {fileID: 8300000, guid: 157ab3d038cdc1843b2854fbb573b573, type: 3}
+  wrong2PosTho: {fileID: 8300000, guid: 6591029144509f94db259284499d19fd, type: 3}
+  wrong3PosTho: {fileID: 8300000, guid: 35b0667f52ebc574682aedd5e3322107, type: 3}
   timer: 1
   rightChoice: 0
   currentHP: 0
@@ -1581,7 +1584,7 @@ GameObject:
   - component: {fileID: 3083727129568030546}
   - component: {fileID: 4153453211204628460}
   m_Layer: 9
-  m_Name: FrayBS2
+  m_Name: Fray1
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1663,7 +1666,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 518156f6e92319042b6c118b50683a20, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HP: 2
+  HP: 5
   animator: {fileID: 16586491934566729}
   fray: {fileID: 1917212989547606640}
   attackArea: {fileID: 2286455366035462319}
