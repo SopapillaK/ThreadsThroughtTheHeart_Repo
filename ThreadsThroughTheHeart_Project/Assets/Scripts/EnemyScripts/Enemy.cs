@@ -18,10 +18,11 @@ public class Enemy : MonoBehaviour
     public string wayPointTag;
     //public string enemyName;
     [Header("Positive Thoughts QTE")]
-    public GameObject posThoughts;
+    public GameObject posThoughtsController;
     public GameObject postProc;
     public GameObject posOptions;
-   
+    bool timeSlow = false;
+
 
 
     public GameManager gameManager;
@@ -47,30 +48,42 @@ public class Enemy : MonoBehaviour
         }
 
         //Positivethought QTE
-        if (posThoughts.GetComponent<PositiveThought>().currentHP == 1)
+        if (HP == 1 && !timeSlow)
         {
+            Debug.Log("time slow");
             Time.timeScale = 0.2f;
+            timeSlow = true;
             postProc.SetActive(true);
             posOptions.SetActive(true);
         }
         else if (HP == 5)
         {
-            Time.timeScale = 1.0f;
-            postProc.SetActive(false);
-            posOptions.SetActive(false);
+            if (timeSlow)
+            {
+                Debug.Log("untime slow 1");
+
+                Time.timeScale = 1.0f;
+                timeSlow = false;
+                postProc.SetActive(false);
+                posOptions.SetActive(false);
+            }
+            
         }
 
-        if (posThoughts.GetComponent<PositiveThought>().rightChoice == true)
+        if (posThoughtsController.GetComponent<PositiveThought>().rightChoice == true)
         {
+            Debug.Log("untime slow 2");
+
             Time.timeScale = 1.0f;
             postProc.SetActive(false);
             posOptions.SetActive(false);
 
             if (!frayDie)
             {
+                fightActivated = false;
                 frayDie = true;
                 FrayDie();
-              
+
             }
         }
     }
@@ -98,6 +111,7 @@ public class Enemy : MonoBehaviour
     {
         //Debug.Log("Fray Dead");
         gameManager.enemyDeadCount++;
+        posThoughtsController.GetComponent<PositiveThought>().rightChoice = false;
         Destroy(fray);
     }
 

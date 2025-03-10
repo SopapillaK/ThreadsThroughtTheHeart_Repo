@@ -17,7 +17,7 @@ public class PositiveThought : MonoBehaviour
     bool wrongChoice3AudioPlayed = false;
 
     [SerializeField]
-    public int currentHP;
+    private int currentHP;
     private bool madeChoice = false;
 
     void Update()
@@ -26,21 +26,52 @@ public class PositiveThought : MonoBehaviour
 
         if (currentHP == 1)
         {
-            //Debug.Log("HP is 1");
             if (!madeChoice)
             {
+                //Debug.Log("timer slow");
                 timer -= Time.deltaTime;
-                PositiveChoices();
+
+                if (frayHolder.name == "Fray1Holder")
+                {
+                    //Debug.Log("pos1");
+                    YCorrect();
+                }
+                if (frayHolder.name == "Fray2Holder")
+                {
+                    //Debug.Log("pos2");
+                    TCorrect();
+                }
+                if (frayHolder.name == "Fray3Holder")
+                {
+                    //Debug.Log("pos3");
+                    UCorrect();
+                }
+                if (frayHolder.name == "Fray4Holder")
+                {
+                    //Debug.Log("pos2");
+                    TCorrect();
+                }
+                if (frayHolder.name == "Fray5Holder")
+                {
+                    //Debug.Log("pos2");
+                    YCorrect();
+                }
+                if (frayHolder.name == "Fray6Holder")
+                {
+                    //Debug.Log("pos2");
+                    TCorrect();
+                }
             }
 
             if (timer <= 0 && !madeChoice)
             {
                 enemyFray.GetComponent<Enemy>().HP = 5;
+                timer = 3;
             }
         }
     }
 
-    void PositiveChoices()
+    void YCorrect()
     {
         if (Input.GetKey(KeyCode.T))
         {
@@ -49,6 +80,7 @@ public class PositiveThought : MonoBehaviour
             //Its okay to be alone
             madeChoice = true;
             enemyFray.GetComponent<Enemy>().HP = 5;
+            timer = 3;
 
             if (!wrongChoice2AudioPlayed)
             {
@@ -76,6 +108,7 @@ public class PositiveThought : MonoBehaviour
             //You don't need others all you need is yourself
             madeChoice = true;
             enemyFray.GetComponent<Enemy>().HP = 5;
+            timer = 3;
 
             if (!wrongChoice3AudioPlayed)
             {
@@ -87,12 +120,26 @@ public class PositiveThought : MonoBehaviour
 
     }
 
-    void PositiveChoices2()
+    void TCorrect()
     {
+        if (Input.GetKey(KeyCode.U))
+        {
+            Debug.Log("U");
+
+            //Its okay to be alone
+            madeChoice = true;
+            enemyFray.GetComponent<Enemy>().HP = 5;
+            timer = 3;
+
+            if (!wrongChoice2AudioPlayed)
+            {
+                ac.PlayOneShot(wrong2PosTho);
+                wrongChoice2AudioPlayed = true;
+            }
+        }
         if (Input.GetKey(KeyCode.T))
         {
             Debug.Log("T");
-
             //If they leave you they dont love you
             madeChoice = true;
             rightChoice = true;
@@ -102,16 +149,34 @@ public class PositiveThought : MonoBehaviour
                 ac.PlayOneShot(correctPosTho);
                 correctChoiceAudioPlayed = true;
             }
-            
         }
         if (Input.GetKey(KeyCode.Y))
         {
             Debug.Log("Y");
 
-            //Its okay to be alone
+            //You don't need others all you need is yourself
             madeChoice = true;
             enemyFray.GetComponent<Enemy>().HP = 5;
+            timer = 3;
 
+            if (!wrongChoice3AudioPlayed)
+            {
+                ac.PlayOneShot(wrong3PosTho);
+                wrongChoice3AudioPlayed = true;
+            }
+        }
+        madeChoice = false;
+    }
+
+    void UCorrect()
+    {
+        if (Input.GetKey(KeyCode.Y))
+        {
+            Debug.Log("Y");
+
+            madeChoice = true;
+            enemyFray.GetComponent<Enemy>().HP = 5;
+            timer = 3;
             if (!wrongChoice2AudioPlayed)
             {
                 ac.PlayOneShot(wrong2PosTho);
@@ -121,10 +186,22 @@ public class PositiveThought : MonoBehaviour
         if (Input.GetKey(KeyCode.U))
         {
             Debug.Log("U");
+            madeChoice = true;
+            rightChoice = true;
 
-            //You don't need others all you need is yourself
+            if (!correctChoiceAudioPlayed) //This is to prevent the audio from playing for every frame the key is held down
+            {
+                ac.PlayOneShot(correctPosTho);
+                correctChoiceAudioPlayed = true;
+            }
+        }
+        if (Input.GetKey(KeyCode.T))
+        {
+            Debug.Log("T");
+
             madeChoice = true;
             enemyFray.GetComponent<Enemy>().HP = 5;
+            timer = 3;
 
             if (!wrongChoice3AudioPlayed)
             {
@@ -133,6 +210,5 @@ public class PositiveThought : MonoBehaviour
             }
         }
         madeChoice = false;
-
     }
 }
