@@ -111,6 +111,7 @@ public class Enemy : MonoBehaviour
     {
         //Debug.Log("Fray Dead");
         gameManager.enemyDeadCount++;
+        gameManager.UpdateFrayCounter();
         posThoughtsController.GetComponent<PositiveThought>().rightChoice = false;
         Destroy(fray);
     }

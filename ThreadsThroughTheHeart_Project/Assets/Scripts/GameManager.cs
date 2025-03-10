@@ -1,16 +1,21 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
     public int enemyDeadCount;
     public int enemyTotalCount;
     public GameObject winMenuScreen;
+
+    [Header("UI")]
+    public Text frayCounter;
     // Start is called before the first frame update
     void Start()
     {
         enemyDeadCount = 0;
+        UpdateFrayCounter();
     }
 
     // Update is called once per frame
@@ -20,5 +25,10 @@ public class GameManager : MonoBehaviour
         {
             winMenuScreen.SetActive(true);
         }
+    }
+
+    public void UpdateFrayCounter()
+    {
+        frayCounter.text = "Fray: " + enemyDeadCount;
     }
 }
