@@ -72,7 +72,7 @@ public class Enemy : MonoBehaviour
 
         if (posThoughtsController.GetComponent<PositiveThought>().rightChoice == true)
         {
-            Debug.Log("untime slow 2");
+            //Debug.Log("untime slow 2");
 
             Time.timeScale = 1.0f;
             postProc.SetActive(false);
