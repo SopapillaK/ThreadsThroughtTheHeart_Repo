@@ -9,6 +9,7 @@ public class TextTrigger : MonoBehaviour
     void OnTriggerEnter()
     {
         UnderstandingChoices.SetActive(true);
+        //Time.timeScale = 0;
     }
     /*
     void OnCollisionEnter(Collision collision)

@@ -8,10 +8,11 @@ using UnityEngine.SceneManagement;
 public class understandingChoice : MonoBehaviour
 {
     public GameObject TextBox;
-    public GameObject QuestionText;
-    public GameObject Choice1;
-    public GameObject Choice2;
-    public GameObject Choice3;
+    //public GameObject QuestionText;
+    //public GameObject Choice1;
+    //public GameObject Choice2;
+    //public GameObject Choice3;
+    public GameObject Understandings;
     public int ChoiceMade;
     public static int UnderstandingPoints = 0;
     public Text Pointstext;
@@ -64,31 +65,25 @@ public class understandingChoice : MonoBehaviour
     {
         if (ChoiceMade == 2)
         {
-            Choice1.SetActive(false);
-            Choice2.SetActive(false);
-            Choice3.SetActive(false);
-            QuestionText.SetActive(false);
+            Understandings.SetActive(false);
+            //Time.timeScale = 1;
 
             Invoke("GoodEndingVid", 5f);
 
         }
         else if (ChoiceMade == 3)
         {
-            Choice1.SetActive(false);
-            Choice2.SetActive(false);
-            Choice3.SetActive(false);
-            QuestionText.SetActive(false);
+            Understandings.SetActive(false);
+            //Time.timeScale = 1;
 
             Invoke("BadEndingVid", 2f);
 
         }
         else if (ChoiceMade == 1)
         {
-            Choice1.SetActive(false);
-            Choice2.SetActive(false);
-            Choice3.SetActive(false);
-            QuestionText.SetActive(false);
-            
+            Understandings.SetActive(false);
+            //Time.timeScale = 1;
+
             Invoke("BadEndingVid", 2f);
         }
     }
