@@ -5,9 +5,14 @@ using UnityEngine;
 public class TextTrigger : MonoBehaviour
 {
     public GameObject UnderstandingChoices;
-
+    
     void OnTriggerEnter()
     {
         UnderstandingChoices.SetActive(true);
     }
+    /*
+    void OnCollisionEnter(Collision collision)
+    {
+        UnderstandingChoices.SetActive(true);
+    }*/
 }
