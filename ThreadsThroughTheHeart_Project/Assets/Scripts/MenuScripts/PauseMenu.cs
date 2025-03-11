@@ -2,18 +2,24 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.Audio;
 
 public class PauseMenu : MonoBehaviour
 {
-    public bool gameIsPaused = false;
-    public bool inSettings = false;
-    public bool inConOrCred = false;
+    bool gameIsPaused = false;
+    bool inSettings = false;
+    bool inConOrCred = false;
+    [Header("Menus")]
     public GameObject pausePanel;
     public GameObject settingPanel;
     public GameObject creditsPanel;
     public GameObject controlsPanel;
     public GameObject loseMenuScreen;
     public GameObject winMenuScreen;
+    [Header("Audio")]
+    public AudioMixer negThoughtMixer;
+    public AudioMixer posThoughtMixer;
+
 
     void Update()
     {
@@ -49,6 +55,7 @@ public class PauseMenu : MonoBehaviour
     {
         pausePanel.SetActive(true);
         Time.timeScale = 0;
+        MuteAudio();
         gameIsPaused = true;
         inSettings = false;
         settingPanel.SetActive(false);
@@ -60,6 +67,7 @@ public class PauseMenu : MonoBehaviour
     {
         pausePanel.SetActive(false);
         Time.timeScale = 1;
+        UnmuteAudio();
         gameIsPaused = false;
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
@@ -110,5 +118,17 @@ public class PauseMenu : MonoBehaviour
         inConOrCred = true;
         settingPanel.SetActive(false);
         pausePanel.SetActive(false);
+    }
+
+    void MuteAudio()
+    {
+        negThoughtMixer.SetFloat("NegThoughtVolume", -80f);
+        posThoughtMixer.SetFloat("PosThoughtVolume", -80f);
+    }
+
+    void UnmuteAudio()
+    {
+        negThoughtMixer.SetFloat("NegThoughtVolume", 0f);
+        posThoughtMixer.SetFloat("PosThoughtVolume", 0f);
     }
 }

@@ -3301,15 +3301,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e5973aae011a2c4f8a646211ac9f51d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameIsPaused: 0
-  inSettings: 0
-  inConOrCred: 0
   pausePanel: {fileID: 705146542}
   settingPanel: {fileID: 1018798988}
   creditsPanel: {fileID: 90648494}
   controlsPanel: {fileID: 1681458298}
   loseMenuScreen: {fileID: 1932223924}
   winMenuScreen: {fileID: 1676722827}
+  negThoughtMixer: {fileID: 24100000, guid: ae8e8c281a94c734294d26a99211f8e4, type: 2}
+  posThoughtMixer: {fileID: 24100000, guid: 43c7c167a4a6bbb4db956bd6128ee8b2, type: 2}
 --- !u!1 &323758338
 GameObject:
   m_ObjectHideFlags: 0
@@ -3503,6 +3502,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1404713815059766771, guid: b728b076897f1014c8708edd21df10af, type: 3}
+      propertyPath: OutputAudioMixerGroup
+      value: 
+      objectReference: {fileID: 24300002, guid: 43c7c167a4a6bbb4db956bd6128ee8b2, type: 2}
     - target: {fileID: 1917212989547606640, guid: b728b076897f1014c8708edd21df10af, type: 3}
       propertyPath: m_Name
       value: Fray5Holder
@@ -3510,6 +3513,10 @@ PrefabInstance:
     - target: {fileID: 1947285614825071609, guid: b728b076897f1014c8708edd21df10af, type: 3}
       propertyPath: timer
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1947285614825071609, guid: b728b076897f1014c8708edd21df10af, type: 3}
+      propertyPath: fullHP
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 1947285614825071609, guid: b728b076897f1014c8708edd21df10af, type: 3}
       propertyPath: wrong2PosTho
@@ -3564,6 +3571,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4153453211204628460, guid: b728b076897f1014c8708edd21df10af, type: 3}
+      propertyPath: HP
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4153453211204628460, guid: b728b076897f1014c8708edd21df10af, type: 3}
       propertyPath: wall
       value: 
       objectReference: {fileID: 536416253}
@@ -3587,6 +3598,10 @@ PrefabInstance:
       propertyPath: posThoughtsController
       value: 
       objectReference: {fileID: 1307632703}
+    - target: {fileID: 4613441611404725291, guid: b728b076897f1014c8708edd21df10af, type: 3}
+      propertyPath: OutputAudioMixerGroup
+      value: 
+      objectReference: {fileID: 24300002, guid: ae8e8c281a94c734294d26a99211f8e4, type: 2}
     - target: {fileID: 6456481787930029918, guid: b728b076897f1014c8708edd21df10af, type: 3}
       propertyPath: m_Name
       value: Fray5
@@ -9757,6 +9772,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1404713815059766771, guid: b728b076897f1014c8708edd21df10af, type: 3}
+      propertyPath: OutputAudioMixerGroup
+      value: 
+      objectReference: {fileID: 24300002, guid: 43c7c167a4a6bbb4db956bd6128ee8b2, type: 2}
     - target: {fileID: 1917212989547606640, guid: b728b076897f1014c8708edd21df10af, type: 3}
       propertyPath: m_Name
       value: Fray6Holder
@@ -9764,6 +9783,10 @@ PrefabInstance:
     - target: {fileID: 1947285614825071609, guid: b728b076897f1014c8708edd21df10af, type: 3}
       propertyPath: timer
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1947285614825071609, guid: b728b076897f1014c8708edd21df10af, type: 3}
+      propertyPath: fullHP
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 1947285614825071609, guid: b728b076897f1014c8708edd21df10af, type: 3}
       propertyPath: wrong2PosTho
@@ -9818,6 +9841,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4153453211204628460, guid: b728b076897f1014c8708edd21df10af, type: 3}
+      propertyPath: HP
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4153453211204628460, guid: b728b076897f1014c8708edd21df10af, type: 3}
       propertyPath: wall
       value: 
       objectReference: {fileID: 190967471}
@@ -9841,6 +9868,10 @@ PrefabInstance:
       propertyPath: posThoughtsController
       value: 
       objectReference: {fileID: 1809730186}
+    - target: {fileID: 4613441611404725291, guid: b728b076897f1014c8708edd21df10af, type: 3}
+      propertyPath: OutputAudioMixerGroup
+      value: 
+      objectReference: {fileID: 24300002, guid: ae8e8c281a94c734294d26a99211f8e4, type: 2}
     - target: {fileID: 6456481787930029918, guid: b728b076897f1014c8708edd21df10af, type: 3}
       propertyPath: m_Name
       value: Fray6
@@ -12117,6 +12148,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1404713815059766771, guid: b728b076897f1014c8708edd21df10af, type: 3}
+      propertyPath: OutputAudioMixerGroup
+      value: 
+      objectReference: {fileID: 24300002, guid: 43c7c167a4a6bbb4db956bd6128ee8b2, type: 2}
     - target: {fileID: 1917212989547606640, guid: b728b076897f1014c8708edd21df10af, type: 3}
       propertyPath: m_Name
       value: Fray4Holder
@@ -12124,6 +12159,10 @@ PrefabInstance:
     - target: {fileID: 1947285614825071609, guid: b728b076897f1014c8708edd21df10af, type: 3}
       propertyPath: timer
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1947285614825071609, guid: b728b076897f1014c8708edd21df10af, type: 3}
+      propertyPath: fullHP
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 1947285614825071609, guid: b728b076897f1014c8708edd21df10af, type: 3}
       propertyPath: wrong2PosTho
@@ -12178,6 +12217,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4153453211204628460, guid: b728b076897f1014c8708edd21df10af, type: 3}
+      propertyPath: HP
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4153453211204628460, guid: b728b076897f1014c8708edd21df10af, type: 3}
       propertyPath: wall
       value: 
       objectReference: {fileID: 217164404}
@@ -12201,6 +12244,10 @@ PrefabInstance:
       propertyPath: posThoughtsController
       value: 
       objectReference: {fileID: 1411895605}
+    - target: {fileID: 4613441611404725291, guid: b728b076897f1014c8708edd21df10af, type: 3}
+      propertyPath: OutputAudioMixerGroup
+      value: 
+      objectReference: {fileID: 24300002, guid: ae8e8c281a94c734294d26a99211f8e4, type: 2}
     - target: {fileID: 6456481787930029918, guid: b728b076897f1014c8708edd21df10af, type: 3}
       propertyPath: m_Name
       value: Fray4
@@ -12351,7 +12398,7 @@ AudioSource:
   m_GameObject: {fileID: 1510311022}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 24300002, guid: ada47ee52cc58104dbad048c21ede5c0, type: 2}
   m_audioClip: {fileID: 8300000, guid: 8dddedd580f8d894aa7f93bd9b9ac858, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 0.7
@@ -15892,6 +15939,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1404713815059766771, guid: b728b076897f1014c8708edd21df10af, type: 3}
+      propertyPath: OutputAudioMixerGroup
+      value: 
+      objectReference: {fileID: 24300002, guid: 43c7c167a4a6bbb4db956bd6128ee8b2, type: 2}
     - target: {fileID: 1917212989547606640, guid: b728b076897f1014c8708edd21df10af, type: 3}
       propertyPath: m_Name
       value: Fray3Holder
@@ -15899,6 +15950,10 @@ PrefabInstance:
     - target: {fileID: 1947285614825071609, guid: b728b076897f1014c8708edd21df10af, type: 3}
       propertyPath: timer
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1947285614825071609, guid: b728b076897f1014c8708edd21df10af, type: 3}
+      propertyPath: fullHP
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 1947285614825071609, guid: b728b076897f1014c8708edd21df10af, type: 3}
       propertyPath: wrong2PosTho
@@ -15953,6 +16008,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4153453211204628460, guid: b728b076897f1014c8708edd21df10af, type: 3}
+      propertyPath: HP
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4153453211204628460, guid: b728b076897f1014c8708edd21df10af, type: 3}
       propertyPath: wall
       value: 
       objectReference: {fileID: 796902343}
@@ -15976,6 +16035,10 @@ PrefabInstance:
       propertyPath: posThoughtsController
       value: 
       objectReference: {fileID: 1571867464}
+    - target: {fileID: 4613441611404725291, guid: b728b076897f1014c8708edd21df10af, type: 3}
+      propertyPath: OutputAudioMixerGroup
+      value: 
+      objectReference: {fileID: 24300002, guid: ae8e8c281a94c734294d26a99211f8e4, type: 2}
     - target: {fileID: 6456481787930029918, guid: b728b076897f1014c8708edd21df10af, type: 3}
       propertyPath: m_Name
       value: Fray3
@@ -16476,6 +16539,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1404713815059766771, guid: b728b076897f1014c8708edd21df10af, type: 3}
+      propertyPath: OutputAudioMixerGroup
+      value: 
+      objectReference: {fileID: 24300002, guid: 43c7c167a4a6bbb4db956bd6128ee8b2, type: 2}
     - target: {fileID: 1917212989547606640, guid: b728b076897f1014c8708edd21df10af, type: 3}
       propertyPath: m_Name
       value: Fray2Holder
@@ -16483,6 +16550,10 @@ PrefabInstance:
     - target: {fileID: 1947285614825071609, guid: b728b076897f1014c8708edd21df10af, type: 3}
       propertyPath: timer
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1947285614825071609, guid: b728b076897f1014c8708edd21df10af, type: 3}
+      propertyPath: fullHP
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 1947285614825071609, guid: b728b076897f1014c8708edd21df10af, type: 3}
       propertyPath: wrong2PosTho
@@ -16537,6 +16608,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4153453211204628460, guid: b728b076897f1014c8708edd21df10af, type: 3}
+      propertyPath: HP
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4153453211204628460, guid: b728b076897f1014c8708edd21df10af, type: 3}
       propertyPath: wall
       value: 
       objectReference: {fileID: 879474151}
@@ -16560,6 +16635,10 @@ PrefabInstance:
       propertyPath: posThoughtsController
       value: 
       objectReference: {fileID: 2072823614}
+    - target: {fileID: 4613441611404725291, guid: b728b076897f1014c8708edd21df10af, type: 3}
+      propertyPath: OutputAudioMixerGroup
+      value: 
+      objectReference: {fileID: 24300002, guid: ae8e8c281a94c734294d26a99211f8e4, type: 2}
     - target: {fileID: 6456481787930029918, guid: b728b076897f1014c8708edd21df10af, type: 3}
       propertyPath: m_Name
       value: Fray2
@@ -17419,11 +17498,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3822926467888525465, guid: 03a48b5a34591114881d76fac936dce6, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.00000008625474
+      value: 0.00000008625472
       objectReference: {fileID: 0}
     - target: {fileID: 3822926467888525465, guid: 03a48b5a34591114881d76fac936dce6, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.000000051245955
+      value: -0.000000051245944
       objectReference: {fileID: 0}
     - target: {fileID: 4265933628972119685, guid: 03a48b5a34591114881d76fac936dce6, type: 3}
       propertyPath: m_Name
@@ -17563,6 +17642,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1404713815059766771, guid: b728b076897f1014c8708edd21df10af, type: 3}
+      propertyPath: OutputAudioMixerGroup
+      value: 
+      objectReference: {fileID: 24300002, guid: 43c7c167a4a6bbb4db956bd6128ee8b2, type: 2}
     - target: {fileID: 1917212989547606640, guid: b728b076897f1014c8708edd21df10af, type: 3}
       propertyPath: m_Name
       value: Fray1Holder
@@ -17570,6 +17653,10 @@ PrefabInstance:
     - target: {fileID: 1947285614825071609, guid: b728b076897f1014c8708edd21df10af, type: 3}
       propertyPath: timer
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1947285614825071609, guid: b728b076897f1014c8708edd21df10af, type: 3}
+      propertyPath: fullHP
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 3472064619495991343, guid: b728b076897f1014c8708edd21df10af, type: 3}
       propertyPath: m_LocalPosition.x
@@ -17612,6 +17699,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4153453211204628460, guid: b728b076897f1014c8708edd21df10af, type: 3}
+      propertyPath: HP
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4153453211204628460, guid: b728b076897f1014c8708edd21df10af, type: 3}
       propertyPath: wall
       value: 
       objectReference: {fileID: 112264198}
@@ -17635,6 +17726,10 @@ PrefabInstance:
       propertyPath: posThoughtsController
       value: 
       objectReference: {fileID: 1804844319}
+    - target: {fileID: 4613441611404725291, guid: b728b076897f1014c8708edd21df10af, type: 3}
+      propertyPath: OutputAudioMixerGroup
+      value: 
+      objectReference: {fileID: 24300002, guid: ae8e8c281a94c734294d26a99211f8e4, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

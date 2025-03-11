@@ -18,6 +18,7 @@ public class PositiveThought : MonoBehaviour
 
     [SerializeField]
     private int currentHP;
+    public int fullHP;
     private bool madeChoice = false;
 
     void Update()
@@ -79,7 +80,7 @@ public class PositiveThought : MonoBehaviour
 
             //Its okay to be alone
             madeChoice = true;
-            enemyFray.GetComponent<Enemy>().HP = 5;
+            enemyFray.GetComponent<Enemy>().HP = fullHP;
             timer = 3;
 
             if (!wrongChoice2AudioPlayed)
@@ -107,7 +108,7 @@ public class PositiveThought : MonoBehaviour
 
             //You don't need others all you need is yourself
             madeChoice = true;
-            enemyFray.GetComponent<Enemy>().HP = 5;
+            enemyFray.GetComponent<Enemy>().HP = fullHP;
             timer = 3;
 
             if (!wrongChoice3AudioPlayed)
@@ -128,7 +129,7 @@ public class PositiveThought : MonoBehaviour
 
             //Its okay to be alone
             madeChoice = true;
-            enemyFray.GetComponent<Enemy>().HP = 5;
+            enemyFray.GetComponent<Enemy>().HP = fullHP;
             timer = 3;
 
             if (!wrongChoice2AudioPlayed)
@@ -156,7 +157,7 @@ public class PositiveThought : MonoBehaviour
 
             //You don't need others all you need is yourself
             madeChoice = true;
-            enemyFray.GetComponent<Enemy>().HP = 5;
+            enemyFray.GetComponent<Enemy>().HP = fullHP;
             timer = 3;
 
             if (!wrongChoice3AudioPlayed)
@@ -175,7 +176,7 @@ public class PositiveThought : MonoBehaviour
             Debug.Log("Y");
 
             madeChoice = true;
-            enemyFray.GetComponent<Enemy>().HP = 5;
+            enemyFray.GetComponent<Enemy>().HP = fullHP;
             timer = 3;
             if (!wrongChoice2AudioPlayed)
             {
@@ -200,7 +201,7 @@ public class PositiveThought : MonoBehaviour
             Debug.Log("T");
 
             madeChoice = true;
-            enemyFray.GetComponent<Enemy>().HP = 5;
+            enemyFray.GetComponent<Enemy>().HP = fullHP;
             timer = 3;
 
             if (!wrongChoice3AudioPlayed)

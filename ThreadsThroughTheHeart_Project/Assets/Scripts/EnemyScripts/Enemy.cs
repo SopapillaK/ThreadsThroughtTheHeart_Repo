@@ -46,7 +46,7 @@ public class Enemy : MonoBehaviour
             postProc.SetActive(true);
             posOptions.SetActive(true);
         }
-        else if (HP == 5)
+        else if (HP == 4)
         {
             if (timeSlow)
             {
