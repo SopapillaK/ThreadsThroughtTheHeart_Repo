@@ -19,6 +19,7 @@ public class PlayerMovement : MonoBehaviour
     public Animator animator;
     public bool isWalkingCheck;
 
+
     float horizontalInput;
     float verticalInput;
 
@@ -71,15 +72,18 @@ public class PlayerMovement : MonoBehaviour
         // calc movement dir
         moveDirection = orientation.forward * verticalInput + orientation.right * horizontalInput;
 
-        rb.AddForce(moveDirection.normalized * moveSpeed * 10f, ForceMode.Force);
-        if( Input.GetKey("w"))
-            animator.SetBool("isWalking", true);
-        if (Input.GetKey("s"))
-            animator.SetBool("isWalking", true);
-        if (Input.GetKey("a"))
-            animator.SetBool("isWalking", true);
-        if (Input.GetKey("d"))
-            animator.SetBool("isWalking", true);
+        if (!animator.GetBool("AttackAnim"))
+        {
+            rb.AddForce(moveDirection.normalized * moveSpeed * 10f, ForceMode.Force);
+            if (Input.GetKey("w"))
+                animator.SetBool("isWalking", true);
+            if (Input.GetKey("s"))
+                animator.SetBool("isWalking", true);
+            if (Input.GetKey("a"))
+                animator.SetBool("isWalking", true);
+            if (Input.GetKey("d"))
+                animator.SetBool("isWalking", true);
+        }
     }
 
     private void SpeedControl()

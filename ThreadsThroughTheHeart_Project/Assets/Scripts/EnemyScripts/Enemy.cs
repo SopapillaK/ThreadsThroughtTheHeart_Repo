@@ -30,22 +30,12 @@ public class Enemy : MonoBehaviour
     void Awake()
     {
         wayPointTag = wayPoints.tag;
-        //enemyName = gameObject.name;
 
         FrayPatrolState frayPatrolState = animator.GetBehaviour<FrayPatrolState>();
         frayPatrolState.wayPointList = wayPointTag;
     }
     void Update()
     {
-        //Activate wall
-        if (fightActivated == true)
-        {
-            wall.SetActive(true);
-        }
-        else
-        {
-            wall.SetActive(false);
-        }
 
         //Positivethought QTE
         if (HP == 1 && !timeSlow)
@@ -60,7 +50,7 @@ public class Enemy : MonoBehaviour
         {
             if (timeSlow)
             {
-                Debug.Log("untime slow 1");
+                //Debug.Log("untime slow 1");
 
                 Time.timeScale = 1.0f;
                 timeSlow = false;
@@ -72,11 +62,15 @@ public class Enemy : MonoBehaviour
 
         if (posThoughtsController.GetComponent<PositiveThought>().rightChoice == true)
         {
-            //Debug.Log("untime slow 2");
+            if (timeSlow)
+            {
+                //Debug.Log("untime slow 2");
 
-            Time.timeScale = 1.0f;
-            postProc.SetActive(false);
-            posOptions.SetActive(false);
+                Time.timeScale = 1.0f;
+                postProc.SetActive(false);
+                posOptions.SetActive(false);
+            }
+           
 
             if (!frayDie)
             {
@@ -91,7 +85,11 @@ public class Enemy : MonoBehaviour
     {
         if (animator.GetBool("isShouting"))
         {
-            fightActivated = true;
+            if (!fightActivated)
+            {
+                fightActivated = true;
+                wall.SetActive(true);
+            }
             HP -= damageAmount;
             animator.SetTrigger("damage");
             //Debug.Log("hit animation");
@@ -113,6 +111,7 @@ public class Enemy : MonoBehaviour
         gameManager.enemyDeadCount++;
         gameManager.UpdateFrayCounter();
         posThoughtsController.GetComponent<PositiveThought>().rightChoice = false;
+        wall.SetActive(false);
         Destroy(fray);
     }
 
