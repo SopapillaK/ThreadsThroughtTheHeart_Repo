@@ -9,6 +9,8 @@ public class TextTrigger : MonoBehaviour
     void OnTriggerEnter()
     {
         UnderstandingChoices.SetActive(true);
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
         //Time.timeScale = 0;
     }
     /*
