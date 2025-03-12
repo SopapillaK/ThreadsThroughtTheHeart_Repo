@@ -22,8 +22,7 @@ public class Enemy : MonoBehaviour
     public GameObject postProc;
     public GameObject posOptions;
     bool timeSlow = false;
-    [Header("Fray Effects")]
-    public GameObject exlimationPoints;
+    
 
 
     public GameManager gameManager;
@@ -37,7 +36,6 @@ public class Enemy : MonoBehaviour
     }
     void Update()
     {
-
         //Positivethought QTE
         if (HP == 1 && !timeSlow)
         {
@@ -81,6 +79,8 @@ public class Enemy : MonoBehaviour
 
             }
         }
+
+        
     }
     public void TakeDamage(int damageAmount)
     {

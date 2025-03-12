@@ -17,11 +17,6 @@ public class FrayPatrolState : StateMachineBehaviour
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
 
-        //GameObject enemy = GameObject.Find("Fray1Holder");
-        ////GameObject enemy = GameObject.FindGameObjectWithTag("Enemy");
-        //Enemy enemyScript = enemy.GetComponent<Enemy>();
-        //wayPointList = enemyScript.wayPointTag;
-
         player = GameObject.FindGameObjectWithTag("Player").transform;
         agent = animator.transform.parent.GetComponent<NavMeshAgent>();
         agent.speed = 1.5f;
