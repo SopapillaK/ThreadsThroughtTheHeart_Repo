@@ -3,15 +3,19 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class TutorialScript : MonoBehaviour
+public class SceneMovement : MonoBehaviour
 {
-    public void StartGame()
+    public void NextScene()
     {
         UnityEngine.SceneManagement.SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 
-    public void GoBack()
+    public void PreviousScene()
     {
         UnityEngine.SceneManagement.SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
+    }
+    public void TitleScene()
+    {
+        SceneManager.LoadScene(0);
     }
 }

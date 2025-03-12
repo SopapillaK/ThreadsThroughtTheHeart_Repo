@@ -542,8 +542,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 939010353}
-        m_TargetAssemblyTypeName: EndingSkip, Assembly-CSharp
-        m_MethodName: FadetoTitle
+        m_TargetAssemblyTypeName: SceneMovement, Assembly-CSharp
+        m_MethodName: TitleScene
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -682,7 +682,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 939010349}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7248ceb750f2a4b44a5263cffdc24c85, type: 3}
+  m_Script: {fileID: 11500000, guid: 94f10da984e5d984fa2b599bbb0feed4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1816450911

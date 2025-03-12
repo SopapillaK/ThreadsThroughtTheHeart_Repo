@@ -12,6 +12,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Hopital.unity
     guid: 71ae9134272effc4ea77ec7fea417a25
   - enabled: 1
+    path: Assets/Scenes/ControlsScene.unity
+    guid: 775da1da836ebed42976f743fa0f28b2
+  - enabled: 1
     path: Assets/Scenes/Tutorial.unity
     guid: ca3f83ec8374bf648a0f81525dfd4444
   - enabled: 1
