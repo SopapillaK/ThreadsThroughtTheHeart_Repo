@@ -22,7 +22,8 @@ public class Enemy : MonoBehaviour
     public GameObject postProc;
     public GameObject posOptions;
     bool timeSlow = false;
-
+    [Header("Fray Effects")]
+    public GameObject exlimationPoints;
 
 
     public GameManager gameManager;
