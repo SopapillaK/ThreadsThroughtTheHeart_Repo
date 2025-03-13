@@ -8,6 +8,8 @@ public class Player : MonoBehaviour
     public int maxHealth;
     public GameObject loseMenuScreen;
     public PlayerHealthBar healthBar;
+    public AudioSource audioSource;
+    public AudioClip hurtSound;
     // Start is called before the first frame update
     void Start()
     {
@@ -26,6 +28,7 @@ public class Player : MonoBehaviour
     {
         health -= amount;
         healthBar.SetHealth(health);
+        audioSource.PlayOneShot(hurtSound);
 
         if (health <= 0)
         {
