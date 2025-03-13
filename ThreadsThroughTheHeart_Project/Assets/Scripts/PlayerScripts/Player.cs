@@ -5,8 +5,9 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     public int health;
-    public int maxHealth = 3;
+    public int maxHealth;
     public GameObject loseMenuScreen;
+    public PlayerHealthBar healthBar;
     // Start is called before the first frame update
     void Start()
     {
@@ -24,7 +25,8 @@ public class Player : MonoBehaviour
     public void PlayerTakeDamage(int amount)
     {
         health -= amount;
-        
+        healthBar.SetHealth(health);
+
         if (health <= 0)
         {
             loseMenuScreen.SetActive(true);

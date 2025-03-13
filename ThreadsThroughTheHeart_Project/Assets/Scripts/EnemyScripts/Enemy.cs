@@ -9,6 +9,7 @@ public class Enemy : MonoBehaviour
     public Animator animator;
     public GameObject fray;
     public GameObject attackArea;
+    
     bool frayDie = false;
     [Header("Wall Up")]
     public bool fightActivated = false;
