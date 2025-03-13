@@ -7,7 +7,7 @@ public class Player : MonoBehaviour
     public int health;
     public int maxHealth;
     public GameObject loseMenuScreen;
-    public PlayerHealthBar healthBar;
+    public HealthBar healthBar;
     public AudioSource audioSource;
     public AudioClip hurtSound;
     // Start is called before the first frame update

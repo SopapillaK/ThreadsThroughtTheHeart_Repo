@@ -9,7 +9,9 @@ public class Enemy : MonoBehaviour
     public Animator animator;
     public GameObject fray;
     public GameObject attackArea;
-    
+    public HealthBar healthBarScript;
+    public GameObject healthBar;
+
     bool frayDie = false;
     [Header("Wall Up")]
     public bool fightActivated = false;
@@ -54,6 +56,7 @@ public class Enemy : MonoBehaviour
 
                 Time.timeScale = 1.0f;
                 timeSlow = false;
+                healthBarScript.SetHealth(HP);
                 postProc.SetActive(false);
                 posOptions.SetActive(false);
             }
@@ -91,8 +94,10 @@ public class Enemy : MonoBehaviour
             {
                 fightActivated = true;
                 wall.SetActive(true);
+                healthBar.SetActive(true);
             }
             HP -= damageAmount;
+            healthBarScript.SetHealth(HP);
             animator.SetTrigger("damage");
             //Debug.Log("hit animation");
 
