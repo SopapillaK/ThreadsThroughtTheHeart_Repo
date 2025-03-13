@@ -18,7 +18,7 @@ public class FrayHitState : StateMachineBehaviour
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         timer += Time.deltaTime;
-        if (timer > 1.8)
+        if (timer > 0.9)
         {
             animator.SetBool("isAttacking", true);
         }
