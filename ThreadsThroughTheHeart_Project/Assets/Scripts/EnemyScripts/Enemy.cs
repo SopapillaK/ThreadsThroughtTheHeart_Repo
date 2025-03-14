@@ -24,7 +24,7 @@ public class Enemy : MonoBehaviour
     public GameObject posThoughtsController;
     public GameObject postProc;
     public GameObject posOptions;
-    bool timeSlow = false;
+    bool timeFreeze = false;
     
 
 
@@ -40,22 +40,22 @@ public class Enemy : MonoBehaviour
     void Update()
     {
         //Positivethought QTE
-        if (HP == 1 && !timeSlow)
+        if (HP == 1 && !timeFreeze)
         {
-            Debug.Log("time slow");
-            Time.timeScale = 0.2f;
-            timeSlow = true;
+            //Debug.Log("time freeze");
+            Time.timeScale = 0.1f;
+            timeFreeze = true;
             postProc.SetActive(true);
             posOptions.SetActive(true);
         }
         else if (HP == 4)
         {
-            if (timeSlow)
+            if (timeFreeze)
             {
-                //Debug.Log("untime slow 1");
+                //Debug.Log("untime freeze 1");
 
                 Time.timeScale = 1.0f;
-                timeSlow = false;
+                timeFreeze = false;
                 healthBarScript.SetHealth(HP);
                 postProc.SetActive(false);
                 posOptions.SetActive(false);
@@ -65,7 +65,7 @@ public class Enemy : MonoBehaviour
 
         if (posThoughtsController.GetComponent<PositiveThought>().rightChoice == true)
         {
-            if (timeSlow)
+            if (timeFreeze)
             {
                 //Debug.Log("untime slow 2");
 

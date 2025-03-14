@@ -11,7 +11,9 @@ public class PositiveThought : MonoBehaviour
     public AudioClip correctPosTho;
     public AudioClip wrong2PosTho;
     public AudioClip wrong3PosTho;
-    public float timer = 3;
+    [Header("View Only")]
+    public float timer = 4;
+    float fullTimer = 4;
     public bool rightChoice = false;
     bool correctChoiceAudioPlayed = false;
     bool wrongChoice2AudioPlayed = false;
@@ -19,7 +21,7 @@ public class PositiveThought : MonoBehaviour
 
     [SerializeField]
     private int currentHP;
-    public int fullHP;
+    int fullHP = 4;
     private bool madeChoice = false;
 
     void Update()
@@ -30,8 +32,7 @@ public class PositiveThought : MonoBehaviour
         {
             if (!madeChoice)
             {
-                //Debug.Log("timer slow");
-                timer -= Time.deltaTime;
+                timer -= Time.unscaledDeltaTime; //allows the timer to count down while time is frozen
 
                 if (frayHolder.name == "Fray1Holder")
                 {
@@ -67,8 +68,8 @@ public class PositiveThought : MonoBehaviour
 
             if (timer <= 0 && !madeChoice)
             {
-                enemyFray.GetComponent<Enemy>().HP = 5;
-                timer = 3;
+                enemyFray.GetComponent<Enemy>().HP = fullHP;
+                timer = fullTimer;
             }
         }
     }
@@ -82,7 +83,7 @@ public class PositiveThought : MonoBehaviour
             //Its okay to be alone
             madeChoice = true;
             enemyFray.GetComponent<Enemy>().HP = fullHP;
-            timer = 3;
+            timer = fullTimer;
 
             if (!wrongChoice2AudioPlayed)
             {
@@ -115,7 +116,7 @@ public class PositiveThought : MonoBehaviour
             //You don't need others all you need is yourself
             madeChoice = true;
             enemyFray.GetComponent<Enemy>().HP = fullHP;
-            timer = 3;
+            timer = fullTimer;
 
             if (!wrongChoice3AudioPlayed)
             {
@@ -136,7 +137,7 @@ public class PositiveThought : MonoBehaviour
             //Its okay to be alone
             madeChoice = true;
             enemyFray.GetComponent<Enemy>().HP = fullHP;
-            timer = 3;
+            timer = fullTimer;
 
             if (!wrongChoice2AudioPlayed)
             {
@@ -169,7 +170,7 @@ public class PositiveThought : MonoBehaviour
             //You don't need others all you need is yourself
             madeChoice = true;
             enemyFray.GetComponent<Enemy>().HP = fullHP;
-            timer = 3;
+            timer = fullTimer;
 
             if (!wrongChoice3AudioPlayed)
             {
@@ -188,7 +189,7 @@ public class PositiveThought : MonoBehaviour
 
             madeChoice = true;
             enemyFray.GetComponent<Enemy>().HP = fullHP;
-            timer = 3;
+            timer = fullTimer;
             if (!wrongChoice2AudioPlayed)
             {
                 ac.PlayOneShot(wrong2PosTho);
@@ -219,7 +220,7 @@ public class PositiveThought : MonoBehaviour
 
             madeChoice = true;
             enemyFray.GetComponent<Enemy>().HP = fullHP;
-            timer = 3;
+            timer = fullTimer;
 
             if (!wrongChoice3AudioPlayed)
             {
