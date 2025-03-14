@@ -12,8 +12,8 @@ public class PositiveThought : MonoBehaviour
     public AudioClip wrong2PosTho;
     public AudioClip wrong3PosTho;
     [Header("View Only")]
-    public float timer = 4;
-    float fullTimer = 4;
+    public float timer = 7;
+    float fullTimer = 7;
     public bool rightChoice = false;
     bool correctChoiceAudioPlayed = false;
     bool wrongChoice2AudioPlayed = false;
