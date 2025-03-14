@@ -49,23 +49,7 @@ public class PauseMenu : MonoBehaviour
                 Pause();
             }
         }
-        if (Input.GetKeyDown(KeyCode.Z))
-        {
-            TimeFreeze();
-        }
-        if (Input.GetKeyDown(KeyCode.X))
-        {
-            UnFreezeTime();
-        }  
-    }
-
-    void TimeFreeze()
-    {
-        Time.timeScale = 0;
-    }
-    void UnFreezeTime()
-    {
-        Time.timeScale = 1;
+          
     }
     public void Pause()
     {

@@ -1344,10 +1344,10 @@ MonoBehaviour:
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
-    m_LineSpacing: 1.17
-  m_Text: Affirmation Overdrive activates when Fray are at 1 health (total 4 health).
-    Correct answer can be discovered by listening to the phrase the Fray is shouting
-    and picking an answer that combats the negative thought being shouted.
+    m_LineSpacing: 1.05
+  m_Text: Affirmation Overdrive activates when Fray are at 1 health. Correct answer
+    can be discovered by listening to the phrase the Fray is shouting and picking
+    an answer that combats the negative thought being shouted.
 --- !u!222 &1345267994
 CanvasRenderer:
   m_ObjectHideFlags: 0
