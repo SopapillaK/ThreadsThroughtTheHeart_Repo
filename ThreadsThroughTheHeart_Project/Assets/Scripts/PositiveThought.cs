@@ -6,6 +6,7 @@ public class PositiveThought : MonoBehaviour
 {
     public GameObject enemyFray;
     public GameObject frayHolder;
+    public GameObject posThoughText;
     public AudioSource ac;
     public AudioClip correctPosTho;
     public AudioClip wrong2PosTho;
@@ -100,6 +101,11 @@ public class PositiveThought : MonoBehaviour
             {
                 ac.PlayOneShot(correctPosTho);
                 correctChoiceAudioPlayed = true;
+                TextTurnOn();
+                if (correctChoiceAudioPlayed)
+                {
+                    TextTurnOff();
+                }
             }
         }
         if (Input.GetKey(KeyCode.U))
@@ -149,6 +155,11 @@ public class PositiveThought : MonoBehaviour
             {
                 ac.PlayOneShot(correctPosTho);
                 correctChoiceAudioPlayed = true;
+                TextTurnOn();
+                if (correctChoiceAudioPlayed)
+                {
+                    TextTurnOff();
+                }
             }
         }
         if (Input.GetKey(KeyCode.Y))
@@ -194,6 +205,12 @@ public class PositiveThought : MonoBehaviour
             {
                 ac.PlayOneShot(correctPosTho);
                 correctChoiceAudioPlayed = true;
+                TextTurnOn();
+                //Invoke("TextTurnOff", 3f);
+                if(correctChoiceAudioPlayed)
+                {
+                    TextTurnOff();
+                }
             }
         }
         if (Input.GetKey(KeyCode.T))
@@ -211,5 +228,15 @@ public class PositiveThought : MonoBehaviour
             }
         }
         madeChoice = false;
+    }
+
+    void TextTurnOn()
+    {
+        posThoughText.SetActive(true);
+    }
+
+    void TextTurnOff()
+    {
+        posThoughText.SetActive(false);
     }
 }
