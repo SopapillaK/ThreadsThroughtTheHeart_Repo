@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
@@ -23,12 +24,17 @@ public class GameManager : MonoBehaviour
     {
         if (enemyDeadCount >= enemyTotalCount)
         {
-            winMenuScreen.SetActive(true);
+            Invoke("NextScene", 1);
         }
     }
 
     public void UpdateFrayCounter()
     {
         frayCounter.text = "Fray: " + enemyDeadCount;
+    }
+
+    public void NextScene()
+    {
+        UnityEngine.SceneManagement.SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 }
