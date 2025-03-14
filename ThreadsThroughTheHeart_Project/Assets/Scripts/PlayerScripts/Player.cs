@@ -21,6 +21,7 @@ public class Player : MonoBehaviour
         if (other.tag == "AttackArea")
         {
             PlayerTakeDamage(1);
+            CameraShake.Shake(duration: 3f, strength: 1.5f);
         }
     }
 

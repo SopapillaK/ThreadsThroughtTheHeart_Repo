@@ -7,8 +7,6 @@ public class WeaponAttackArea : MonoBehaviour
     public Animator playerAnimator;
     public GameObject weaponAttackArea;
 
-
-    // Update is called once per frame
     void Update()
     {
         if (playerAnimator.GetBool("WeaponAttackArea"))
