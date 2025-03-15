@@ -105,7 +105,8 @@ public class understandingChoice : MonoBehaviour
 
     void Start()
     {
-        LoadPoints();
+        //LoadPoints();
+        UnderstandingPoints = 0;
     }
 
     // Update is called once per frame
