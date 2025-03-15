@@ -9,6 +9,7 @@ public class Enemy : MonoBehaviour
     public Animator animator;
     public GameObject fray;
     public GameObject attackArea;
+    [Header("UI")]
     public HealthBar healthBarScript;
     public GameObject healthBar;
 
@@ -122,7 +123,6 @@ public class Enemy : MonoBehaviour
         Destroy(fray);
     }
 
-    
 
     //public void ShrinkFray()
     //{
