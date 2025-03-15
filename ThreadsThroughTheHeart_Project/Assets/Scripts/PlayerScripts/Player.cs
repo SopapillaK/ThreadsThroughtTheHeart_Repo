@@ -36,4 +36,10 @@ public class Player : MonoBehaviour
             loseMenuScreen.SetActive(true);
         }
     }
+
+    public void PlayerHeal(int amount)
+    {
+        health += amount;
+        healthBar.SetHealth(health);
+    }
 }

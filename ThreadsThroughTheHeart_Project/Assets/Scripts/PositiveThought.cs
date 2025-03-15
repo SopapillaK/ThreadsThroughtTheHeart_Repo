@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PositiveThought : MonoBehaviour
 {
@@ -11,9 +12,11 @@ public class PositiveThought : MonoBehaviour
     public AudioClip correctPosTho;
     public AudioClip wrong2PosTho;
     public AudioClip wrong3PosTho;
+    [Header("Timer Bar")]
+    public HealthBar healthBarScript;
     [Header("View Only")]
-    public float timer = 7;
-    float fullTimer = 7;
+    public float timer = 10;
+    public float fullTimer = 10;
     public bool rightChoice = false;
     bool correctChoiceAudioPlayed = false;
     bool wrongChoice2AudioPlayed = false;
@@ -33,6 +36,7 @@ public class PositiveThought : MonoBehaviour
             if (!madeChoice)
             {
                 timer -= Time.unscaledDeltaTime; //allows the timer to count down while time is frozen
+                healthBarScript.SetTimer(timer);
 
                 if (frayHolder.name == "Fray1Holder")
                 {

@@ -11,4 +11,9 @@ public class HealthBar : MonoBehaviour
     {
         slider.value = health;
     }
+
+    public void SetTimer(float time)
+    {
+        slider.value = time;
+    }
 }

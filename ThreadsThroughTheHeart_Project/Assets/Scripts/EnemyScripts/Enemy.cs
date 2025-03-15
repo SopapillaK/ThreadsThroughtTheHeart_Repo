@@ -26,7 +26,9 @@ public class Enemy : MonoBehaviour
     public GameObject postProc;
     public GameObject posOptions;
     bool timeFreeze = false;
-    
+    [Header("Player")]
+    public Player playerScript;
+
 
 
     public GameManager gameManager;
@@ -44,7 +46,7 @@ public class Enemy : MonoBehaviour
         if (HP == 1 && !timeFreeze)
         {
             //Debug.Log("time freeze");
-            Time.timeScale = 0.1f;
+            Time.timeScale = 0.08f;
             timeFreeze = true;
             postProc.SetActive(true);
             posOptions.SetActive(true);
@@ -108,6 +110,7 @@ public class Enemy : MonoBehaviour
     public void FrayDie()
     {
         fightActivated = false;
+        playerScript.PlayerHeal(1);
         animator.SetTrigger("die");
         animator.SetBool("isAttacking", false);
         Invoke("DeleteFray", 2.6f);
