@@ -8,6 +8,7 @@ public class Player : MonoBehaviour
     public int maxHealth;
     public GameObject loseMenuScreen;
     public HealthBar healthBar;
+    public GameObject redFlash;
     public AudioSource audioSource;
     public AudioClip hurtSound;
     // Start is called before the first frame update
@@ -30,11 +31,18 @@ public class Player : MonoBehaviour
         health -= amount;
         healthBar.SetHealth(health);
         audioSource.PlayOneShot(hurtSound);
+        redFlash.SetActive(true);
+        Invoke("TurnOffRedFlash", 0.2f);
 
         if (health <= 0)
         {
             loseMenuScreen.SetActive(true);
         }
+    }
+
+    void TurnOffRedFlash()
+    {
+        redFlash.SetActive(false);
     }
 
     public void PlayerHeal(int amount)
