@@ -502,7 +502,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -461.16202, y: -211.66678}
+  m_AnchoredPosition: {x: -461.16202, y: -205}
   m_SizeDelta: {x: 281.676, y: 227.3335}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &338810494
@@ -581,8 +581,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 378, y: 60}
-  m_SizeDelta: {x: 446.6757, y: 255.2432}
+  m_AnchoredPosition: {x: 378, y: 64}
+  m_SizeDelta: {x: 446.68, y: 250.82}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &421124337
 MonoBehaviour:
@@ -1309,7 +1309,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 378, y: -222.60254}
+  m_AnchoredPosition: {x: 378, y: -215.93575}
   m_SizeDelta: {x: 446.68, y: 249.205}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1345267993
@@ -1334,7 +1334,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: b7101d80ceec1d443b1618f99c4e4c17, type: 3}
-    m_FontSize: 32
+    m_FontSize: 40
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
@@ -1345,9 +1345,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1.05
-  m_Text: Affirmation Overdrive activates when Fray are at 1 health. Correct answer
-    can be discovered by listening to the phrase the Fray is shouting and picking
-    an answer that combats the negative thought being shouted.
+  m_Text: Affirmation Overdrive activates when Fray are at low health. LISTEN to
+    the phrase the Fray is shouting and picking an answer that combats the negative
+    thought.
 --- !u!222 &1345267994
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1390,7 +1390,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -82, y: -211.66678}
+  m_AnchoredPosition: {x: -82, y: -204.99998}
   m_SizeDelta: {x: 445.56, y: 227.3335}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1711142159
@@ -1426,8 +1426,8 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Left Click to Attack, does 1 damage. The player can only do damage to the
-    Fray when they are in their Shout state.
+  m_Text: Left Click to Attack. The player can ONLY do damage to the Fray when they
+    are SHOUTING AT YOU.
 --- !u!222 &1711142160
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1470,8 +1470,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -460, y: 51}
-  m_SizeDelta: {x: 280, y: 280}
+  m_AnchoredPosition: {x: -460, y: 64}
+  m_SizeDelta: {x: 280, y: 250.82}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2062260239
 MonoBehaviour:
