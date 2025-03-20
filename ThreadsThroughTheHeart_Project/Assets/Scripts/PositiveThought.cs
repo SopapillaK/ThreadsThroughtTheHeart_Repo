@@ -80,7 +80,7 @@ public class PositiveThought : MonoBehaviour
 
     void YCorrect()
     {
-        if (Input.GetKey(KeyCode.T) || Input.GetKey(KeyCode.LeftArrow))
+        if (Input.GetKey(KeyCode.T) /*|| Input.GetKey(KeyCode.LeftArrow)*/)
         {
             Debug.Log("T");
 
@@ -95,7 +95,7 @@ public class PositiveThought : MonoBehaviour
                 wrongChoice2AudioPlayed = true;
             }
         }
-        if (Input.GetKey(KeyCode.Y) || Input.GetKey(KeyCode.UpArrow))
+        if (Input.GetKey(KeyCode.Y) /*|| Input.GetKey(KeyCode.UpArrow)*/)
         {
             Debug.Log("Y");
             //If they leave you they dont love you
@@ -113,7 +113,7 @@ public class PositiveThought : MonoBehaviour
                 }
             }
         }
-        if (Input.GetKey(KeyCode.U) || Input.GetKey(KeyCode.RightArrow))
+        if (Input.GetKey(KeyCode.U) /*|| Input.GetKey(KeyCode.RightArrow)*/)
         {
             Debug.Log("U");
 
@@ -134,7 +134,7 @@ public class PositiveThought : MonoBehaviour
 
     void TCorrect()
     {
-        if (Input.GetKey(KeyCode.U) || Input.GetKey(KeyCode.RightArrow))
+        if (Input.GetKey(KeyCode.U) /*|| Input.GetKey(KeyCode.RightArrow)*/)
         {
             Debug.Log("U");
 
@@ -149,7 +149,7 @@ public class PositiveThought : MonoBehaviour
                 wrongChoice2AudioPlayed = true;
             }
         }
-        if (Input.GetKey(KeyCode.T) || Input.GetKey(KeyCode.LeftArrow))
+        if (Input.GetKey(KeyCode.T) /*|| Input.GetKey(KeyCode.LeftArrow)*/)
         {
             Debug.Log("T");
             //If they leave you they dont love you
@@ -167,7 +167,7 @@ public class PositiveThought : MonoBehaviour
                 }
             }
         }
-        if (Input.GetKey(KeyCode.Y) || Input.GetKey(KeyCode.UpArrow))
+        if (Input.GetKey(KeyCode.Y) /*|| Input.GetKey(KeyCode.UpArrow)*/)
         {
             Debug.Log("Y");
 
@@ -187,7 +187,7 @@ public class PositiveThought : MonoBehaviour
 
     void UCorrect()
     {
-        if (Input.GetKey(KeyCode.Y) || Input.GetKey(KeyCode.UpArrow))
+        if (Input.GetKey(KeyCode.Y) /*|| Input.GetKey(KeyCode.UpArrow)*/)
         {
             Debug.Log("Y");
 
@@ -200,7 +200,7 @@ public class PositiveThought : MonoBehaviour
                 wrongChoice2AudioPlayed = true;
             }
         }
-        if (Input.GetKey(KeyCode.U) || Input.GetKey(KeyCode.RightArrow))
+        if (Input.GetKey(KeyCode.U) /*|| Input.GetKey(KeyCode.RightArrow)*/)
         {
             Debug.Log("U");
             madeChoice = true;
@@ -218,7 +218,7 @@ public class PositiveThought : MonoBehaviour
                 }
             }
         }
-        if (Input.GetKey(KeyCode.T) || Input.GetKey(KeyCode.LeftArrow))
+        if (Input.GetKey(KeyCode.T) /*|| Input.GetKey(KeyCode.LeftArrow)*/)
         {
             Debug.Log("T");
 
