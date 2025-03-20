@@ -13,6 +13,8 @@ public class Video : MonoBehaviour
         video = GetComponent<VideoPlayer>();
         video.Play();
         video.loopPointReached += CheckOver;
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
     }
 
 
