@@ -17,7 +17,7 @@ public class PlayerMovement : MonoBehaviour
 
     public Transform orientation;
     public Transform playerOBJ;
-    Transform playerOBJRotation;
+    Quaternion playerOBJRotation;
     public Animator animator;
     public bool isWalkingCheck;
 
@@ -45,12 +45,17 @@ public class PlayerMovement : MonoBehaviour
             animator.SetBool("isWalking", false);
 
         PlayerAttack();
+        MyInput();
+
         if (!animator.GetBool("AttackAnim"))
         {
-            MyInput();
-            playerOBJRotation = playerOBJ;
+            playerOBJRotation = playerOBJ.rotation;
         }
-            
+        else
+        {
+            playerOBJ.rotation = playerOBJRotation;
+        }
+
         SpeedControl();
 
         // handle drag
@@ -67,12 +72,9 @@ public class PlayerMovement : MonoBehaviour
         {
             rb.velocity = Vector3.zero;
             rb.angularVelocity = Vector3.zero;
-            playerOBJ.rotation = playerOBJRotation.rotation;
-            //rb.constraints = RigidbodyConstraints.FreezeRotationY;
         }
         else
         {
-            //rb.constraints &= ~RigidbodyConstraints.FreezeRotationY;
             MovePlayer();
         }
     }
