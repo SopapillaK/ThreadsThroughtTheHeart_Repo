@@ -16,6 +16,8 @@ public class PlayerMovement : MonoBehaviour
     bool grounded;
 
     public Transform orientation;
+    public Transform playerOBJ;
+    Transform playerOBJRotation;
     public Animator animator;
     public bool isWalkingCheck;
 
@@ -30,7 +32,7 @@ public class PlayerMovement : MonoBehaviour
     private void Start()
     {
         rb = GetComponent<Rigidbody>();
-        rb.freezeRotation = true;
+        //rb.freezeRotation = true;
         isWalkingCheck = false;
     }
 
@@ -39,12 +41,16 @@ public class PlayerMovement : MonoBehaviour
         // ground check
         // 0.5 is half the player objects height so in this case half of the capsules height   
         grounded = Physics.Raycast(transform.position, Vector3.down, playerHeight * 0.5f + 0.2f, groundLayer);
-
         if (!Input.anyKey)
             animator.SetBool("isWalking", false);
 
         PlayerAttack();
-        MyInput();
+        if (!animator.GetBool("AttackAnim"))
+        {
+            MyInput();
+            playerOBJRotation = playerOBJ;
+        }
+            
         SpeedControl();
 
         // handle drag
@@ -57,8 +63,18 @@ public class PlayerMovement : MonoBehaviour
 
     private void FixedUpdate()
     {
-        MovePlayer();
-         
+        if (animator.GetBool("AttackAnim"))
+        {
+            rb.velocity = Vector3.zero;
+            rb.angularVelocity = Vector3.zero;
+            playerOBJ.rotation = playerOBJRotation.rotation;
+            //rb.constraints = RigidbodyConstraints.FreezeRotationY;
+        }
+        else
+        {
+            //rb.constraints &= ~RigidbodyConstraints.FreezeRotationY;
+            MovePlayer();
+        }
     }
 
     private void MyInput()
@@ -72,18 +88,24 @@ public class PlayerMovement : MonoBehaviour
         // calc movement dir
         moveDirection = orientation.forward * verticalInput + orientation.right * horizontalInput;
 
-        if (!animator.GetBool("AttackAnim"))
+        if (Input.GetKey("w"))
         {
-            rb.AddForce(moveDirection.normalized * moveSpeed * 10f, ForceMode.Force);
-            if (Input.GetKey("w"))
-                animator.SetBool("isWalking", true);
-            if (Input.GetKey("s"))
-                animator.SetBool("isWalking", true);
-            if (Input.GetKey("a"))
-                animator.SetBool("isWalking", true);
-            if (Input.GetKey("d"))
-                animator.SetBool("isWalking", true);
+            animator.SetBool("isWalking", true);
         }
+        if (Input.GetKey("s"))
+        {
+            animator.SetBool("isWalking", true);
+        }
+        if (Input.GetKey("a"))
+        {
+            animator.SetBool("isWalking", true);
+        }
+        if (Input.GetKey("d"))
+        {
+            animator.SetBool("isWalking", true);
+        }
+        rb.AddForce(moveDirection.normalized * moveSpeed * 10f, ForceMode.Force);
+
     }
 
     private void SpeedControl()
