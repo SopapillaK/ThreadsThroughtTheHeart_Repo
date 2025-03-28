@@ -46,7 +46,7 @@ public class Enemy : MonoBehaviour
         if (HP == 1 && !timeFreeze)
         {
             //Debug.Log("time freeze");
-            Time.timeScale = 0.08f;
+            Time.timeScale = 0.05f;
             timeFreeze = true;
             postProc.SetActive(true);
             posOptions.SetActive(true);
