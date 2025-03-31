@@ -44,12 +44,12 @@ public class PlayerMovement : MonoBehaviour
         if (!Input.anyKey)
             animator.SetBool("isWalking", false);
 
-        PlayerAttack();
         MyInput();
 
         if (!animator.GetBool("AttackAnim"))
         {
             playerOBJRotation = playerOBJ.rotation;
+            PlayerAttack();
         }
         else
         {
