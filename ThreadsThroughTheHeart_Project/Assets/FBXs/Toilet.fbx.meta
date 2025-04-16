@@ -3,7 +3,27 @@ guid: 433f35fba6751f944ab026e4938c68e2
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: BackMat
+    second: {fileID: 2100000, guid: ab985e7ec8e1e534ca3b04cc3cbbf132, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: BowlMat
+    second: {fileID: 2100000, guid: ab44803ed4979604980c85baf97c05b0, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: LidMat
+    second: {fileID: 2100000, guid: 7cb6b6d13eb8e264292cbc515a14abca, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: SeatMat
+    second: {fileID: 2100000, guid: db7636bc0390bca469d6160e98836482, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
@@ -90,7 +110,7 @@ ModelImporter:
     armStretch: 0.05
     legStretch: 0.05
     feetSpacing: 0
-    globalScale: 0.39999998
+    globalScale: 40
     rootMotionBoneName: 
     hasTranslationDoF: 0
     hasExtraRoot: 0
