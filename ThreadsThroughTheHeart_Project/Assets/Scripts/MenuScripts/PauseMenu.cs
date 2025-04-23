@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.Audio;
+using UnityEngine.UI;
 
 public class PauseMenu : MonoBehaviour
 {
@@ -19,6 +20,9 @@ public class PauseMenu : MonoBehaviour
     [Header("Audio")]
     public AudioMixer negThoughtMixer;
     public AudioMixer posThoughtMixer;
+    [Header("MouseSensitivity")]
+    public Slider mouseSensitivitySlider;
+
 
 
     void Update()
