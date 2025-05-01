@@ -20,8 +20,8 @@ public class PauseMenu : MonoBehaviour
     [Header("Audio")]
     public AudioMixer negThoughtMixer;
     public AudioMixer posThoughtMixer;
-    [Header("MouseSensitivity")]
-    public Slider mouseSensitivitySlider;
+    //[Header("MouseSensitivity")]
+    //public Slider mouseSensitivitySlider;
 
 
 
